@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:talatah/src/app/route/route.dart';
+import '../../../app/route/route.dart';
 import '../../../app/widgets/custom_snackbar.dart';
 import '../../../app/theme/color.dart';
 import '../../../app/theme/size.dart';

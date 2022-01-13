@@ -8,7 +8,9 @@ class Routes {
   static const forgotAuth = '/signin/forgot/auth'; // forgot password auth
   static const forgotReset = '/signin/forgot/reset'; // forgot password reset
   static const home = '/app/home'; // home
-  static const profile = '/app/profile'; // Profile
   static const about = '/app/about'; // About
-  static const settings = '/app/settings'; // Settings
+  static const profile = '/app/profile'; // Profile
+  static const profileSetting = '/app/profile/settings'; // Profile settings
+  static const privacy = '/app/privacy'; // Privacy
+  static const terms = '/app/terms'; // Terms
 }

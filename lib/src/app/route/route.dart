@@ -15,4 +15,5 @@ class Routes {
   static const privacy = '/app/privacy'; // Privacy
   static const terms = '/app/terms'; // Terms
   static const contact = '/app/contact'; // Contact
+  static const quiz = '/app/quiz'; // Quiz
 }

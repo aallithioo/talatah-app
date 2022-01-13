@@ -39,12 +39,12 @@ class _MyLearningScreenState extends State<MyLearningScreen> {
                     kSizeBoxVerticalSmall,
                     // TODO: Add list of quiz
                     Column(
-                      children: [
-                        const MyLearningCard(),
-                        const MyLearningCard(),
-                        const MyLearningCard(),
-                        const MyLearningCard(),
-                        const MyLearningCard(),
+                      children: const [
+                        MyLearningCard(),
+                        MyLearningCard(),
+                        MyLearningCard(),
+                        MyLearningCard(),
+                        MyLearningCard(),
                       ],
                     ),
                   ],

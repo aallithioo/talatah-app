@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:talatah/src/app/route/route.dart';
+import '../../../app/route/route.dart';
 import '../../../app/widgets/custom_snackbar.dart';
 import '../../../app/theme/color.dart';
 import '../../../app/theme/size.dart';
@@ -171,7 +171,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                               if (credential.accessToken != null) {
                                 Navigator.pushReplacementNamed(
-                                    context, Routes.home);
+                                    context, Routes.controller);
                               }
                             },
                             child: Image.asset(
@@ -432,7 +432,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    // Navigator.pushNamed(context, '/signup/tac');
+                                    Navigator.pushNamed(context, Routes.terms);
                                   },
                                   child: Text(
                                     'Syarat dan Ketentuan',
@@ -508,7 +508,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       // Sign up
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                              context, Routes.signIn);
+                        },
                         child: Text(
                           'Sign In',
                           style: talatah.textTheme.button!.copyWith(

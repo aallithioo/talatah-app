@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import '../../../app/route/route.dart';
 import '../../../app/theme/color.dart';
 import '../../../app/theme/size.dart';
 import '../../../app/theme/theme.dart';
@@ -262,7 +263,10 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                       // Sign up
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                              context, Routes.signUp);
+                        },
                         child: Text(
                           'Create Account',
                           style: talatah.textTheme.button!.copyWith(

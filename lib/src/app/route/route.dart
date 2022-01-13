@@ -1,10 +1,19 @@
 class Routes {
-  static const splash = '/splash'; // splash screen route
-  static const signIn = '/sigin'; // sign in screen route
-  static const signUp = '/signup'; // sign up screen route
-  static const forgot = '/signin/forgot'; // forgot password screen route
-  static const home = '/app/home'; // home screen route
-  static const profile = '/app/profile'; // Profile screen route
-  static const about = '/app/about'; // About screen route
-  static const settings = '/app/settings'; // Settings screen route
+  static const splash = '/splash'; // splash
+  static const signIn = '/sigin'; // sign in
+  static const signUp = '/signup'; // sign up
+  static const signUpAuth = '/signup/auth'; // sign up auth
+  static const signUpSuccess = '/signup/auth/success'; // sign up success
+  static const forgot = '/signin/forgot'; // forgot password
+  static const forgotAuth = '/signin/forgot/auth'; // forgot password auth
+  static const forgotReset = '/signin/forgot/reset'; // forgot password reset
+  static const controller = '/app'; // Controller
+  static const explore = '/app/explore'; // explore
+  static const about = '/app/about'; // About
+  static const profile = '/app/profile'; // Profile
+  static const profileSetting = '/app/profile/settings'; // Profile settings
+  static const privacy = '/app/privacy'; // Privacy
+  static const terms = '/app/terms'; // Terms
+  static const contact = '/app/contact'; // Contact
+  static const quiz = '/app/quiz'; // Quiz
 }

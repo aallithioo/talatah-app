@@ -30,7 +30,7 @@ class _QuizListScreenState extends State<QuizListScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Belum Selesai',
+                      'Quiz List',
                       style: talatah.textTheme.headline6!.copyWith(
                         color: talatah.textTheme.headline6!.color,
                         fontWeight: FontWeight.w500,
@@ -63,7 +63,7 @@ class _QuizListScreenState extends State<QuizListScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Selesai',
+                      'Completed',
                       style: talatah.textTheme.headline6!.copyWith(
                         color: talatah.textTheme.headline6!.color,
                         fontWeight: FontWeight.w500,

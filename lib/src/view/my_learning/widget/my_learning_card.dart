@@ -39,6 +39,13 @@ class MyLearningCard extends StatelessWidget {
               shape: kRoundedBorderRadiusTiny,
               color: kWhiteColorShade800,
               shadowColor: kTransparentColor,
+              child: ClipRRect(
+                borderRadius: kBorderRadiusTiny,
+                child: Image.asset(
+                  image!,
+                  fit: BoxFit.fill,
+                ),
+              ),
             ),
           ),
           Padding(
@@ -81,12 +88,15 @@ class MyLearningCard extends StatelessWidget {
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: kBorderRadiusTiny,
-                            image: image == null
+                            image: image != null
                                 ? DecorationImage(
-                                    image: NetworkImage(
-                                      user!.photoURL.toString(),
+                                    // image: NetworkImage(
+                                    //   user!.photoURL.toString(),
+                                    // ),
+                                    image: AssetImage(
+                                      'assets/images/jpg/img_teacher.jpg',
                                     ),
-                                    fit: BoxFit.cover,
+                                    fit: BoxFit.fill,
                                   )
                                 : null,
                           ),
@@ -98,7 +108,8 @@ class MyLearningCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          user!.displayName ?? 'Name',
+                          // user!.displayName ?? 'Name',
+                          'Kang Harold',
                           style: talatah.textTheme.bodyText1!.copyWith(
                             color: talatah.textTheme.bodyText1!.color!
                                 .withOpacity(0.7),

@@ -40,11 +40,30 @@ class _MyLearningScreenState extends State<MyLearningScreen> {
                     // TODO: Add list of quiz
                     Column(
                       children: const [
-                        MyLearningCard(),
-                        MyLearningCard(),
-                        MyLearningCard(),
-                        MyLearningCard(),
-                        MyLearningCard(),
+                        MyLearningCard(
+                          image: 'assets/images/png/img_math_small.png',
+                          title: 'Summation',
+                          subject: 'Math',
+                          grade: 'SD Kelas 1',
+                        ),
+                        MyLearningCard(
+                          image: 'assets/images/png/img_art_small.png',
+                          title: 'Drawing',
+                          subject: 'Art',
+                          grade: 'SD Kelas 1',
+                        ),
+                        MyLearningCard(
+                          image: 'assets/images/png/img_social_small.png',
+                          title: 'Opinion',
+                          subject: 'Social',
+                          grade: 'SD Kelas 1',
+                        ),
+                        MyLearningCard(
+                          image: 'assets/images/png/img_math_small.png',
+                          title: 'Subtraction',
+                          subject: 'Math',
+                          grade: 'SD Kelas 1',
+                        ),
                       ],
                     ),
                   ],

@@ -2,6 +2,9 @@ class Routes {
   static const splash = '/splash'; // splash screen route
   static const signIn = '/sigin'; // sign in screen route
   static const signUp = '/signup'; // sign up screen route
+  static const signUpAuth = '/signup/auth'; // sign up auth screen route
+  static const signUpSuccess =
+      '/signup/success'; // sign up success screen route
   static const forgot = '/signin/forgot'; // forgot password screen route
   static const home = '/app/home'; // home screen route
   static const profile = '/app/profile'; // Profile screen route

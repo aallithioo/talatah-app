@@ -51,7 +51,9 @@ class _QuizListScreenState extends State<QuizListScreen> {
                         },
                         child: Padding(
                           padding: kPaddingSymetricVerticalTiny,
-                          child: const QuizCard(),
+                          child: QuizCard(
+                            quizColor: kBlueColorShade300,
+                          ),
                         ),
                       ),
                     ),

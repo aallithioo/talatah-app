@@ -42,7 +42,7 @@ class _QuizListScreenState extends State<QuizListScreen> {
                       scrollDirection: Axis.vertical,
                       physics: const ScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: 3,
+                      itemCount: 1,
                       itemBuilder: (BuildContext context, int index) =>
                           GestureDetector(
                         onTap: () {
@@ -52,6 +52,47 @@ class _QuizListScreenState extends State<QuizListScreen> {
                           padding: kPaddingSymetricVerticalTiny,
                           child: QuizCard(
                             quizColor: kBlueColorShade300,
+                            image: 'assets/images/png/img_math.png',
+                          ),
+                        ),
+                      ),
+                    ),
+                    // TODO: Add list of quiz
+                    ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      physics: const ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 1,
+                      itemBuilder: (BuildContext context, int index) =>
+                          GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.signIn);
+                        },
+                        child: Padding(
+                          padding: kPaddingSymetricVerticalTiny,
+                          child: QuizCard(
+                            quizColor: kBlueColorShade300,
+                            image: 'assets/images/png/img_art.png',
+                          ),
+                        ),
+                      ),
+                    ),
+                    // TODO: Add list of quiz
+                    ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      physics: const ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 1,
+                      itemBuilder: (BuildContext context, int index) =>
+                          GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.signIn);
+                        },
+                        child: Padding(
+                          padding: kPaddingSymetricVerticalTiny,
+                          child: QuizCard(
+                            quizColor: kBlueColorShade300,
+                            image: 'assets/images/png/img_social.png',
                           ),
                         ),
                       ),
@@ -75,7 +116,7 @@ class _QuizListScreenState extends State<QuizListScreen> {
                       scrollDirection: Axis.vertical,
                       physics: const ScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: 3,
+                      itemCount: 1,
                       itemBuilder: (BuildContext context, int index) =>
                           GestureDetector(
                         onTap: () {
@@ -84,7 +125,48 @@ class _QuizListScreenState extends State<QuizListScreen> {
                         child: Padding(
                           padding: kPaddingSymetricVerticalTiny,
                           child: QuizCard(
-                            quizColor: kSuccessColor,
+                            quizColor: kBlueColorShade300,
+                            image: 'assets/images/png/img_art.png',
+                          ),
+                        ),
+                      ),
+                    ),
+                    // TODO: Add list of quiz
+                    ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      physics: const ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 1,
+                      itemBuilder: (BuildContext context, int index) =>
+                          GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.signIn);
+                        },
+                        child: Padding(
+                          padding: kPaddingSymetricVerticalTiny,
+                          child: QuizCard(
+                            quizColor: kBlueColorShade300,
+                            image: 'assets/images/png/img_math.png',
+                          ),
+                        ),
+                      ),
+                    ),
+                    // TODO: Add list of quiz
+                    ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      physics: const ScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 1,
+                      itemBuilder: (BuildContext context, int index) =>
+                          GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, Routes.signIn);
+                        },
+                        child: Padding(
+                          padding: kPaddingSymetricVerticalTiny,
+                          child: QuizCard(
+                            quizColor: kBlueColorShade300,
+                            image: 'assets/images/png/img_social.png',
                           ),
                         ),
                       ),

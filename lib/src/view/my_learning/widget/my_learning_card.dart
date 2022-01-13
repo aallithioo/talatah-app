@@ -14,6 +14,7 @@ class MyLearningCard extends StatelessWidget {
   final String? subject;
   final String? grade;
   final String? image;
+  final String? imageTeacher;
 
   const MyLearningCard({
     Key? key,
@@ -21,6 +22,7 @@ class MyLearningCard extends StatelessWidget {
     this.subject,
     this.grade,
     this.image,
+    this.imageTeacher,
   }) : super(key: key);
 
   @override
@@ -39,6 +41,15 @@ class MyLearningCard extends StatelessWidget {
               shape: kRoundedBorderRadiusTiny,
               color: kWhiteColorShade800,
               shadowColor: kTransparentColor,
+              child: image != null
+                  ? ClipRRect(
+                      borderRadius: kBorderRadiusTiny,
+                      child: Image.asset(
+                        image!,
+                        fit: BoxFit.fill,
+                      ),
+                    )
+                  : null,
             ),
           ),
           Padding(
@@ -80,11 +91,14 @@ class MyLearningCard extends StatelessWidget {
                           width: 40,
                           height: 40,
                           decoration: BoxDecoration(
-                            borderRadius: kBorderRadiusTiny,
-                            image: image == null
+                            borderRadius: kBorderRadiusTiny / 2,
+                            image: imageTeacher != null
                                 ? DecorationImage(
-                                    image: NetworkImage(
-                                      user!.photoURL.toString(),
+                                    // image: NetworkImage(
+                                    //   user!.photoURL.toString(),
+                                    // ),
+                                    image: AssetImage(
+                                      imageTeacher!,
                                     ),
                                     fit: BoxFit.cover,
                                   )
@@ -98,7 +112,8 @@ class MyLearningCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          user!.displayName ?? 'Name',
+                          // user!.displayName ?? 'Name',
+                          'Kang Harold',
                           style: talatah.textTheme.bodyText1!.copyWith(
                             color: talatah.textTheme.bodyText1!.color!
                                 .withOpacity(0.7),

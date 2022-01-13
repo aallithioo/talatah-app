@@ -41,7 +41,7 @@ late String checkPasswordConfirmController =
 class _SignUpScreenState extends State<SignUpScreen> {
   // Form Validation
   Future err() async {
-    if (nameController.text == "" && nameController.text.length >= 4) {
+    if (nameController.text == "" || nameController.text.length >= 4) {
       if (numberReg.hasMatch(checkNameController)) {
         return ScaffoldMessenger.of(context)
             .showSnackBar(kSnackBar('Nama tidak boleh mengandung angka!')!);

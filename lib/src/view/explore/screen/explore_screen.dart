@@ -183,6 +183,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
                             RecommendLearningCard(),
                             RecommendLearningCard(),
                             RecommendLearningCard(),
+                            RecommendLearningCard(),
+                            RecommendLearningCard(),
                           ],
                         ),
                         // Working Fine

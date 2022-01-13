@@ -2,6 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:talatah/src/view/profile/screen/profile_screen.dart';
+import 'src/view/about/screen/about_screen.dart';
+import 'src/view/privacy/screen/privacy_screen.dart';
+import 'src/view/profile/setting/screen/profile_setting.dart';
 import 'src/view/sign_in/forgot/auth/screen/forgot_password_auth_screen.dart';
 import 'src/view/sign_in/forgot/reset/screen/forgot_password_reset_screen.dart';
 import 'src/view/sign_in/forgot/screen/forgot_password.dart';
@@ -14,6 +18,7 @@ import 'src/app/theme/theme.dart';
 import 'src/app/route/route.dart';
 import 'src/view/home/screen/home_screen.dart';
 import 'src/view/sign_up/screen/sign_up_screen.dart';
+import 'src/view/terms/screen/terms.dart';
 
 void main() async {
   // Initialize Firebase
@@ -53,6 +58,11 @@ class _MyAppState extends State<MyApp> {
           Routes.signUpAuth: (_) => const SignUpAuthScreen(),
           Routes.signUpSuccess: (_) => const SignUpSuccessScreen(),
           Routes.home: (_) => const HomeScreen(),
+          Routes.about: (_) => const AboutScreen(),
+          Routes.profile: (_) => const ProfileScreen(),
+          Routes.profileSetting: (_) => const ProfileSettingScreen(),
+          Routes.privacy: (_) => const PrivacyScreen(),
+          Routes.terms: (_) => const TermsScreen(),
         },
       ),
     );

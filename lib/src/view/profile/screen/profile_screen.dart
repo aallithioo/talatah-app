@@ -63,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 ),
                               ),
                               Text(
-                                'SMKN 1 Kabupaten Garut',
+                                'SMKN 10 Kabupaten Garut',
                                 style: talatah.textTheme.bodyText1!.copyWith(
                                   color: talatah.textTheme.bodyText1!.color!
                                       .withOpacity(0.7),
@@ -141,7 +141,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-                kSizeBoxVerticalTiny,
+                kSizeBoxVerticalSmall,
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -210,13 +210,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ],
                 ),
-                kSizeBoxVerticalSmall,
+                kSizeBoxVerticalTiny,
+                const Divider(),
+                kSizeBoxVerticalTiny,
                 TextButton(
                   onPressed: () {
                     FirebaseAuth.instance.signOut();
                   },
-                  child: Text('Sign Out'),
+                  child: Text(
+                    'Sign Out',
+                    style: talatah.textTheme.bodyText1!.copyWith(
+                      color: kErrorColor,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
                 ),
+                kSizeBoxHorizontalMedium,
               ],
             ),
           ),

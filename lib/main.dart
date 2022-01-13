@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:talatah/src/view/profile/screen/profile_screen.dart';
 import 'src/view/about/screen/about_screen.dart';
+import 'src/view/contact/screen/contact_screen.dart';
 import 'src/view/privacy/screen/privacy_screen.dart';
 import 'src/view/profile/setting/screen/profile_setting.dart';
 import 'src/view/sign_in/forgot/auth/screen/forgot_password_auth_screen.dart';
@@ -63,6 +64,7 @@ class _MyAppState extends State<MyApp> {
           Routes.profileSetting: (_) => const ProfileSettingScreen(),
           Routes.privacy: (_) => const PrivacyScreen(),
           Routes.terms: (_) => const TermsScreen(),
+          Routes.contact: (_) => const ContactScreen(),
         },
       ),
     );

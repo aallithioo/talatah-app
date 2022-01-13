@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:talatah/src/view/profile/screen/profile_screen.dart';
 import '../../my_learning/screen/my_learning_screen.dart';
 import '../../quiz/screen/quiz_screen.dart';
 import '../../search/screen/search_screen.dart';
@@ -22,7 +23,7 @@ final List<Widget> _pages = [
   const SearchScreen(),
   const MyLearningScreen(),
   const QuizListScreen(),
-  const ExploreScreen(),
+  const ProfileScreen(),
 ];
 
 class _ControllerScreenState extends State<ControllerScreen> {

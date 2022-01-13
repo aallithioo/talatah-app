@@ -10,6 +10,7 @@ class QuizCard extends StatelessWidget {
   final String? image;
   final String? point;
   final String? maxPoint;
+  final Color? quizColor;
 
   const QuizCard({
     Key? key,
@@ -19,17 +20,18 @@ class QuizCard extends StatelessWidget {
     this.image,
     this.point,
     this.maxPoint,
+    this.quizColor,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
+      width: double.infinity,
       height: 150,
       child: Card(
         margin: kMarginSymetricHorizontalTiny,
         shape: kRoundedBorderRadiusSmall,
-        color: kBlueColorShade400,
+        color: quizColor ?? kWhiteColorShade800,
         shadowColor: kTransparentColor,
       ),
     );

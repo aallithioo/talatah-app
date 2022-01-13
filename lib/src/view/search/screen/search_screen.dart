@@ -93,7 +93,13 @@ class _SearchScreenState extends State<SearchScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Search Results', style: talatah.textTheme.bodyText1!),
+                    Text(
+                      'Search Results',
+                      style: talatah.textTheme.headline6!.copyWith(
+                        color: talatah.textTheme.headline6!.color,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     kSizeBoxVerticalSmall,
                     GridView.builder(
                       scrollDirection: Axis.vertical,

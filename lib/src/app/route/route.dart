@@ -6,6 +6,7 @@ class Routes {
   static const signUpSuccess = '/signup/auth/success'; // sign up success
   static const forgot = '/signin/forgot'; // forgot password
   static const forgotAuth = '/signin/forgot/auth'; // forgot password auth
+  static const forgotReset = '/signin/forgot/reset'; // forgot password reset
   static const home = '/app/home'; // home
   static const profile = '/app/profile'; // Profile
   static const about = '/app/about'; // About

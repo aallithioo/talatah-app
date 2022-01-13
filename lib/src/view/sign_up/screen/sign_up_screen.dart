@@ -432,7 +432,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 ),
                                 GestureDetector(
                                   onTap: () {
-                                    // Navigator.pushNamed(context, '/signup/tac');
+                                    Navigator.pushNamed(context, Routes.terms);
                                   },
                                   child: Text(
                                     'Syarat dan Ketentuan',
@@ -508,7 +508,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       // Sign up
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacementNamed(
+                              context, Routes.signIn);
+                        },
                         child: Text(
                           'Sign In',
                           style: talatah.textTheme.button!.copyWith(

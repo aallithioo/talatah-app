@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
+import 'package:talatah/src/view/controller/screen/controller_screen.dart';
 import 'package:talatah/src/view/profile/screen/profile_screen.dart';
 import 'src/view/about/screen/about_screen.dart';
 import 'src/view/contact/screen/contact_screen.dart';
@@ -63,6 +64,7 @@ class _MyAppState extends State<MyApp> {
           Routes.privacy: (_) => const PrivacyScreen(),
           Routes.terms: (_) => const TermsScreen(),
           Routes.contact: (_) => const ContactScreen(),
+          Routes.controller: (_) => const ControllerScreen(),
         },
       ),
     );

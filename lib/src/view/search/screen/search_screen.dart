@@ -99,11 +99,11 @@ class _SearchScreenState extends State<SearchScreen> {
                       scrollDirection: Axis.vertical,
                       physics: const ScrollPhysics(),
                       shrinkWrap: true,
-                      itemCount: 4,
+                      itemCount: 6,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        childAspectRatio: 1.5,
-                        crossAxisSpacing: kSizeSmall,
+                        childAspectRatio: 1,
+                        crossAxisSpacing: kSizeTiny,
                         mainAxisSpacing: kSizeSmall,
                       ),
                       itemBuilder: (BuildContext context, int index) =>

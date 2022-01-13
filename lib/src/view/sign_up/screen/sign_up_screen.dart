@@ -171,7 +171,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
                               if (credential.accessToken != null) {
                                 Navigator.pushReplacementNamed(
-                                    context, Routes.explore);
+                                    context, Routes.controller);
                               }
                             },
                             child: Image.asset(

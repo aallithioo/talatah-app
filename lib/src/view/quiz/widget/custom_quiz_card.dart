@@ -33,7 +33,14 @@ class QuizCard extends StatelessWidget {
         shape: kRoundedBorderRadiusSmall,
         color: quizColor ?? kWhiteColorShade800,
         shadowColor: kTransparentColor,
-        child: Image.asset(image!),
+        child: ClipRRect(
+          borderRadius: kBorderRadiusSmall,
+          child: Image.asset(
+            image!,
+            fit: BoxFit.fitHeight,
+            alignment: Alignment.centerRight,
+          ),
+        ),
       ),
     );
   }

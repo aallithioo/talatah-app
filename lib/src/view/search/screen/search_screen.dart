@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:talatah/src/app/route/route.dart';
-import 'package:talatah/src/app/theme/color.dart';
-import 'package:talatah/src/app/theme/size.dart';
-import 'package:talatah/src/app/theme/theme.dart';
-import 'package:talatah/src/app/widgets/custom_blur.dart';
-import 'package:talatah/src/app/widgets/custom_border.dart';
-import 'package:talatah/src/app/widgets/custom_category.dart';
-import 'package:talatah/src/app/widgets/custom_padding.dart';
-import 'package:talatah/src/app/widgets/custom_sizebox.dart';
-import 'package:talatah/src/view/explore/widgets/recommend_learning_card.dart';
+import '../../../app/route/route.dart';
+import '../../../app/theme/color.dart';
+import '../../../app/theme/size.dart';
+import '../../../app/theme/theme.dart';
+import '../../../app/widgets/custom_blur.dart';
+import '../../../app/widgets/custom_border.dart';
+import '../../../app/widgets/custom_category.dart';
+import '../../../app/widgets/custom_padding.dart';
+import '../../../app/widgets/custom_sizebox.dart';
+import '../widget/search_result_card.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -111,7 +111,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         onTap: () {
                           Navigator.pushNamed(context, Routes.signIn);
                         },
-                        child: const RecommendLearningCard(),
+                        child: const SearchResultCard(),
                       ),
                     ),
                   ],

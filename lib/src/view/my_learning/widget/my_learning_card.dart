@@ -87,7 +87,7 @@ class MyLearningCard extends StatelessWidget {
                           width: 40,
                           height: 40,
                           decoration: BoxDecoration(
-                            borderRadius: kBorderRadiusTiny,
+                            borderRadius: kBorderRadiusTiny / 2,
                             image: image != null
                                 ? DecorationImage(
                                     // image: NetworkImage(
@@ -96,7 +96,7 @@ class MyLearningCard extends StatelessWidget {
                                     image: AssetImage(
                                       'assets/images/jpg/img_teacher.jpg',
                                     ),
-                                    fit: BoxFit.fill,
+                                    fit: BoxFit.cover,
                                   )
                                 : null,
                           ),

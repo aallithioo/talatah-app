@@ -13,4 +13,5 @@ class Routes {
   static const profileSetting = '/app/profile/settings'; // Profile settings
   static const privacy = '/app/privacy'; // Privacy
   static const terms = '/app/terms'; // Terms
+  static const contact = '/app/contact'; // Contact
 }

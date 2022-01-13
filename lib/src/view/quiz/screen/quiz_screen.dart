@@ -36,7 +36,7 @@ class _QuizListScreenState extends State<QuizListScreen> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    const Divider(),
+                    kSizeBoxVerticalSmall,
                     // TODO: Add list of quiz
                     ListView.builder(
                       scrollDirection: Axis.vertical,
@@ -69,7 +69,7 @@ class _QuizListScreenState extends State<QuizListScreen> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    const Divider(),
+                    kSizeBoxVerticalSmall,
                     // TODO: Add list of quiz
                     ListView.builder(
                       scrollDirection: Axis.vertical,

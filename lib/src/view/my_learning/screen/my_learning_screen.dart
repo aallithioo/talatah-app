@@ -36,25 +36,12 @@ class _MyLearningScreenState extends State<MyLearningScreen> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
-                    const Divider(),
+                    kSizeBoxVerticalSmall,
                     // TODO: Add list of quiz
-                    ListView.builder(
-                      scrollDirection: Axis.vertical,
-                      physics: const ScrollPhysics(),
-                      shrinkWrap: true,
-                      itemCount: 3,
-                      itemBuilder: (BuildContext context, int index) =>
-                          GestureDetector(
-                        onTap: () {
-                          Navigator.pushNamed(context, Routes.signIn);
-                        },
-                        child: Padding(
-                          padding: kPaddingSymetricVerticalTiny,
-                          child: MyLearningCard(
-                            myLearningColor: kBlueColorShade300,
-                          ),
-                        ),
-                      ),
+                    Column(
+                      children: [
+                        const MyLearningCard(),
+                      ],
                     ),
                   ],
                 ),

@@ -216,6 +216,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 TextButton(
                   onPressed: () {
                     FirebaseAuth.instance.signOut();
+                    Navigator.pushReplacementNamed(context, Routes.signIn);
                   },
                   child: Text(
                     'Sign Out',

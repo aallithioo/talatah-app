@@ -30,7 +30,7 @@ class _QuizListScreenState extends State<QuizListScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Quiz List',
+                      'Your Homework',
                       style: talatah.textTheme.headline6!.copyWith(
                         color: talatah.textTheme.headline6!.color,
                         fontWeight: FontWeight.w500,

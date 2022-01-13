@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import '../../my_learning/screen/my_learning_screen.dart';
 import '../../quiz/screen/quiz_screen.dart';
 import '../../search/screen/search_screen.dart';
 import '../../explore/screen/explore_screen.dart';
@@ -19,7 +20,7 @@ int _selectedIndex = 0;
 final List<Widget> _pages = [
   const ExploreScreen(),
   const SearchScreen(),
-  const ExploreScreen(),
+  const MyLearningScreen(),
   const QuizListScreen(),
   const ExploreScreen(),
 ];

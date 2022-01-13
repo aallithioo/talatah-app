@@ -14,6 +14,7 @@ class MyLearningCard extends StatelessWidget {
   final String? subject;
   final String? grade;
   final String? image;
+  final String? imageTeacher;
 
   const MyLearningCard({
     Key? key,
@@ -21,6 +22,7 @@ class MyLearningCard extends StatelessWidget {
     this.subject,
     this.grade,
     this.image,
+    this.imageTeacher,
   }) : super(key: key);
 
   @override
@@ -39,13 +41,15 @@ class MyLearningCard extends StatelessWidget {
               shape: kRoundedBorderRadiusTiny,
               color: kWhiteColorShade800,
               shadowColor: kTransparentColor,
-              child: ClipRRect(
-                borderRadius: kBorderRadiusTiny,
-                child: Image.asset(
-                  image!,
-                  fit: BoxFit.fill,
-                ),
-              ),
+              child: image != null
+                  ? ClipRRect(
+                      borderRadius: kBorderRadiusTiny,
+                      child: Image.asset(
+                        image!,
+                        fit: BoxFit.fill,
+                      ),
+                    )
+                  : null,
             ),
           ),
           Padding(
@@ -88,13 +92,13 @@ class MyLearningCard extends StatelessWidget {
                           height: 40,
                           decoration: BoxDecoration(
                             borderRadius: kBorderRadiusTiny / 2,
-                            image: image != null
+                            image: imageTeacher != null
                                 ? DecorationImage(
                                     // image: NetworkImage(
                                     //   user!.photoURL.toString(),
                                     // ),
                                     image: AssetImage(
-                                      'assets/images/jpg/img_teacher.jpg',
+                                      imageTeacher!,
                                     ),
                                     fit: BoxFit.cover,
                                   )

@@ -12,7 +12,7 @@ SnackBar? kSnackBar(String message) {
     backgroundColor: kErrorColor,
     dismissDirection: DismissDirection.horizontal,
     shape: kRoundedBorderRadiusMedium,
-    duration: const Duration(milliseconds: 300),
+    duration: const Duration(milliseconds: 1000),
     content: GetSnackBar(
       title: "Oops!",
       message: message,

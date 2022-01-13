@@ -41,6 +41,10 @@ class _MyLearningScreenState extends State<MyLearningScreen> {
                     Column(
                       children: [
                         const MyLearningCard(),
+                        const MyLearningCard(),
+                        const MyLearningCard(),
+                        const MyLearningCard(),
+                        const MyLearningCard(),
                       ],
                     ),
                   ],

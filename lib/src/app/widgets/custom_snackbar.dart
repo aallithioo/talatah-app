@@ -10,8 +10,8 @@ SnackBar? kSnackBar(String message) {
     margin: kMarginAllLarge,
     behavior: SnackBarBehavior.floating,
     backgroundColor: kErrorColor,
-    dismissDirection: DismissDirection.horizontal,
     shape: kRoundedBorderRadiusMedium,
+    dismissDirection: DismissDirection.horizontal,
     duration: const Duration(milliseconds: 3000),
     content: GetSnackBar(
       title: "Oops!",

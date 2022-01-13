@@ -7,7 +7,7 @@ class Routes {
   static const forgot = '/signin/forgot'; // forgot password
   static const forgotAuth = '/signin/forgot/auth'; // forgot password auth
   static const forgotReset = '/signin/forgot/reset'; // forgot password reset
-  static const home = '/app/home'; // home
+  static const explore = '/app/explore'; // explore
   static const about = '/app/about'; // About
   static const profile = '/app/profile'; // Profile
   static const profileSetting = '/app/profile/settings'; // Profile settings

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../app/themes/theme.dart';
+
 import '../../app/widgets/custom_padding.dart';
 
 part './widgets/splash_body.dart';

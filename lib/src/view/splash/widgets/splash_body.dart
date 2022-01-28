@@ -11,7 +11,7 @@ class SplashBody extends StatelessWidget {
         child: Center(
           child: Text(
             'Splash Screen',
-            style: Theme.of(context).textTheme.headline5,
+            style: kThioAlli.textTheme.bodyText1,
           ),
         ),
       ),

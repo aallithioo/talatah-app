@@ -23,7 +23,7 @@ class IntroContent extends StatelessWidget {
           title!,
           style: kThioAlli.textTheme.headline6!.copyWith(
             color: kAccentColor,
-            fontWeight: kFontWeightMedium,
+            fontWeight: kFontWeightSemiBold,
           ),
           textAlign: kTextAlignCenter,
         ),

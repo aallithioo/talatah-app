@@ -33,7 +33,7 @@ class _IntroBodyState extends State<IntroBody> {
       child: Column(
         children: [
           const Spacer(),
-          kSizeBoxVerticalLarge,
+          kSizeBoxVerticalMedium,
           // TODO: App name or logo
           Text(
             'talatah',
@@ -42,7 +42,8 @@ class _IntroBodyState extends State<IntroBody> {
               fontWeight: kFontWeightBold,
             ),
           ),
-          // TODO: Main content
+          kSizeBoxVerticalMedium,
+          // TODO: Main content & change it to a auto slider
           Expanded(
             flex: 4,
             child: PageView.builder(
@@ -60,6 +61,7 @@ class _IntroBodyState extends State<IntroBody> {
 
           // TODO: Add indicator
           Expanded(
+            flex: 1,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -74,8 +76,12 @@ class _IntroBodyState extends State<IntroBody> {
           // TODO: Next button
           Positioned.fill(
             child: Padding(
-              padding: EdgeInsets.only(
-                  bottom: kSizeMedium, right: kSizeMedium, left: kSizeMedium),
+              padding: EdgeInsets.fromLTRB(
+                kSizeMedium,
+                0,
+                kSizeMedium,
+                kSizeMedium,
+              ),
               child: Container(
                 width: double.infinity,
                 height: 60,

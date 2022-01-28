@@ -6,7 +6,6 @@ import '../../app/themes/size.dart';
 import '../../app/themes/textalign.dart';
 import '../../app/themes/theme.dart';
 import '../../app/widgets/custom_border.dart';
-import '../../app/widgets/custom_padding.dart';
 import '../../app/widgets/custom_sizebox.dart';
 
 part './widgets/intro_body.dart';

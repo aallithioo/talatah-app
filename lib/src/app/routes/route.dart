@@ -28,4 +28,7 @@ class Routes {
 
   // Report Bug Screen
   static const reportBug = '/app/setting/report-bug';
+
+  // Theme Screen
+  static const theme = '/app/setting/theme';
 }

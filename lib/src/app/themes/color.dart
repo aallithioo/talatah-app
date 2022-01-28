@@ -9,10 +9,9 @@ Color kWarningColor = Colors.orange.shade300;
 Color kTransparentColor = Colors.transparent;
 
 // Main Colors
-Color kCharcoBlack = const Color(0xFF2B2B2B);
-Color kCharcoBlue0 = const Color(0xFFDEEFFF);
-Color kCharcoBlue1 = const Color(0xFFB7E5E5);
-Color kCharcoYellow0 = const Color(0xFFFFE8B5);
+Color kPrimaryColor = const Color(0xFF050527);
+Color kSecondaryColor = const Color(0xFF141431);
+Color kAccentColor = const Color(0xFFC4C4C4);
 
 // Blue colors
 Color kBlueColorShade900 = const Color(0xFF03045E);

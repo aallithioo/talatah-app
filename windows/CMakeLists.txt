@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
-project(talatah LANGUAGES CXX)
+project(aallithioo LANGUAGES CXX)
 
-set(BINARY_NAME "talatah")
+set(BINARY_NAME "aallithioo")
 
 cmake_policy(SET CMP0063 NEW)
 

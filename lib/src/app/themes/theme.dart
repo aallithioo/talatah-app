@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'typography.dart';
 import 'themedata.dart';
 
-class ThioAlliTheme {
+class Theme {
   // Theme data
   static ThemeData kThioAlliLightThemeData() => kLightThemeData();
   static ThemeData kThioAlliDarkThemeData() => kDarkThemeData();
@@ -13,4 +13,4 @@ class ThioAlliTheme {
   static TextTheme kThioAlliDarkTextTheme() => kDarkText;
 }
 
-final kThioAlli = ThioAlliTheme.kThioAlliLightThemeData();
+final kThioAlli = Theme.kThioAlliLightThemeData();

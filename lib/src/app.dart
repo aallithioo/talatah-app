@@ -1,6 +1,8 @@
 import 'package:aallithioo/src/app/routes/route.dart';
 import 'package:flutter/material.dart';
 
+import 'view/splash/splash_screen.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -9,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: Routes.splash,
       routes: {
-        // Routes.intro: (context) => IntroScreens(),
+        Routes.splash: (context) => const SplashScreen(),
       },
     );
   }

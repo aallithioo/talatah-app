@@ -24,7 +24,7 @@ class CustomBottomNavBar extends StatelessWidget {
     return Padding(
       padding: kPaddingAllMedium,
       child: Container(
-        padding: kPaddingSymetricVerticalSmall,
+        padding: kPaddingSymetricVerticalSmall / 1.5,
         decoration: BoxDecoration(
           color: kSecondaryColor,
           borderRadius: kBorderRadiusSmall,

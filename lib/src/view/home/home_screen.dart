@@ -16,8 +16,9 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: kPrimaryColor,
       appBar: kAppBar('talatah'),
       body: const HomeBody(),
-      bottomNavigationBar:
-          const CustomBottomNavBar(selectedMenu: MenuState.home),
+      bottomNavigationBar: const CustomBottomNavBar(
+        selectedMenu: MenuState.home,
+      ),
     );
   }
 }

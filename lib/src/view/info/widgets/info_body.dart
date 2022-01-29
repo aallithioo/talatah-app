@@ -7,37 +7,42 @@ class InfoBody extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Map<String, String>> releaseNotesData = [
       {
-        'title': 'Welcome to talatah',
-        'description': 'Welcome to the app',
-        'changes': '',
+        'version': 'v1.0.2',
+        'description': 'FIX : Overflow error',
+        'changes': '\n- Fixed overflow error',
       },
       {
-        'title': 'Open-Source Program',
-        'description': 'Welcome to the app',
-        'changes': '',
+        'version': 'v1.0.1',
+        'description': 'Add new theme feature',
+        'changes': '\n- Available new themes',
       },
       {
-        'title': 'Privacy is our concern',
-        'description': 'Welcome to the app',
-        'changes': '',
+        'version': 'v1.0.0',
+        'description': 'First release',
+        'changes': '\n- Hi, There!',
       },
     ];
     return SafeArea(
       child: Padding(
         padding: kPaddingSymetricHorizontalLarge,
-        child: Column(
-          children: [
-            ...List.generate(
-              releaseNotesData.length,
-              (index) => InfoContent(
-                title: releaseNotesData[index]['title'],
-                description: releaseNotesData[index]['description'],
-                changes: releaseNotesData[index]['changes'],
-              ),
-            ),
-          ],
+        child: ListView.builder(
+          itemCount: releaseNotesData.length,
+          itemBuilder: (BuildContext context, int index) => InfoContent(
+            version: releaseNotesData[index]['version'],
+            description: releaseNotesData[index]['description'],
+            changes: releaseNotesData[index]['changes'],
+          ),
         ),
       ),
     );
   }
 }
+
+// ...List.generate(
+//   releaseNotesData.length,
+//   (index) => InfoContent(
+//     title: releaseNotesData[index]['title'],
+//     description: releaseNotesData[index]['description'],
+//     changes: releaseNotesData[index]['changes'],
+//   ),
+// ),

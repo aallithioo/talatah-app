@@ -5,6 +5,9 @@ class Routes {
   // Intro Screen
   static const intro = '/app';
 
+  // Intro Screen
+  static const info = '/app/info';
+
   // Home Screen
   static const home = '/app/home';
 

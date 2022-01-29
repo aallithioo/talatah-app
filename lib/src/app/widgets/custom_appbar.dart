@@ -1,9 +1,9 @@
-import 'package:aallithioo/src/app/themes/color.dart';
-import 'package:aallithioo/src/app/themes/size.dart';
-import 'package:aallithioo/src/app/themes/theme.dart';
 import 'package:flutter/material.dart';
 
+import '../themes/color.dart';
 import '../themes/fontweight.dart';
+import '../themes/size.dart';
+import '../themes/theme.dart';
 
 AppBar kAppBar(String title, [Icon? firstIcon, Icon? secondIcon]) {
   return AppBar(

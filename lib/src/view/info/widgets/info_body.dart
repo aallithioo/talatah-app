@@ -37,12 +37,3 @@ class InfoBody extends StatelessWidget {
     );
   }
 }
-
-// ...List.generate(
-//   releaseNotesData.length,
-//   (index) => InfoContent(
-//     title: releaseNotesData[index]['title'],
-//     description: releaseNotesData[index]['description'],
-//     changes: releaseNotesData[index]['changes'],
-//   ),
-// ),

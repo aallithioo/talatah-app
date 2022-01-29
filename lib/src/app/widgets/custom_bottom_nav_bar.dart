@@ -1,3 +1,5 @@
+import 'package:aallithioo/src/app/widgets/custom_border.dart';
+
 import '../enums.dart';
 
 import '../routes/route.dart';
@@ -19,52 +21,45 @@ class CustomBottomNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: kPaddingSymetricVerticalSmall,
-      decoration: BoxDecoration(
-        color: kWhiteColorShade900,
-        boxShadow: [
-          BoxShadow(
-            color: kGreyColorShade50.withOpacity(0.15),
-            blurRadius: 10,
-            spreadRadius: 5,
-          ),
-        ],
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(40),
-          topRight: Radius.circular(40),
+    return Padding(
+      padding: kPaddingAllMedium,
+      child: Container(
+        padding: kPaddingSymetricVerticalSmall,
+        decoration: BoxDecoration(
+          color: kSecondaryColor,
+          borderRadius: kBorderRadiusSmall,
         ),
-      ),
-      child: SafeArea(
-        top: false,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: Icon(
-                Icons.view_in_ar_outlined,
-                color: MenuState.home == selectedMenu
-                    ? kBlueColorShade400
-                    : kGreyColorShade400,
+        child: SafeArea(
+          top: false,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                icon: Icon(
+                  Icons.view_in_ar_outlined,
+                  color: MenuState.home == selectedMenu
+                      ? kAccentColor
+                      : kAccentColor.withOpacity(0.3),
+                ),
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  Routes.home,
+                ),
               ),
-              onPressed: () => Navigator.pushNamed(
-                context,
-                Routes.home,
+              IconButton(
+                icon: Icon(
+                  Icons.settings_rounded,
+                  color: MenuState.setting == selectedMenu
+                      ? kAccentColor
+                      : kAccentColor.withOpacity(0.3),
+                ),
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  Routes.setting,
+                ),
               ),
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.settings_rounded,
-                color: MenuState.setting == selectedMenu
-                    ? kBlueColorShade400
-                    : kGreyColorShade400,
-              ),
-              onPressed: () => Navigator.pushNamed(
-                context,
-                Routes.setting,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

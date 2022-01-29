@@ -25,13 +25,58 @@ class InfoBody extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: kPaddingSymetricHorizontalLarge,
-        child: ListView.builder(
-          itemCount: releaseNotesData.length,
-          itemBuilder: (BuildContext context, int index) => InfoContent(
-            version: releaseNotesData[index]['version'],
-            description: releaseNotesData[index]['description'],
-            changes: releaseNotesData[index]['changes'],
-          ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Release Notes',
+              style: kThioAlli.textTheme.headline5!.copyWith(
+                color: kAccentColor,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            kSizeBoxVerticalSmall,
+            ListView.builder(
+              itemCount: releaseNotesData.length,
+              itemBuilder: (BuildContext context, int index) => InfoContent(
+                version: releaseNotesData[index]['version'],
+                description: releaseNotesData[index]['description'],
+                changes: releaseNotesData[index]['changes'],
+              ),
+              physics: const ScrollPhysics(),
+              shrinkWrap: true,
+            ),
+            const Spacer(),
+            Positioned.fill(
+              bottom: 0,
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: kSizeMedium),
+                  child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: kTransparentColor,
+                      border: Border.all(
+                        color: kAccentColor,
+                        width: 2,
+                      ),
+                      borderRadius: kBorderRadiusMedium,
+                    ),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Continue'.toUpperCase(),
+                        style: kThioAlli.textTheme.button!.copyWith(
+                          color: kAccentColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

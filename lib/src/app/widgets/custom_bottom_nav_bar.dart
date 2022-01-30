@@ -1,96 +1,67 @@
-// import '../enums.dart';
+import 'package:aallithioo/src/app/widgets/custom_border.dart';
 
-// import '../routes/route.dart';
+import '../enums.dart';
 
-// import '../themes/color.dart';
+import '../routes/route.dart';
 
-// import 'custom_padding.dart';
+import '../themes/color.dart';
 
-// import 'package:flutter/material.dart';
-// import 'package:flutter_svg/flutter_svg.dart';
+import 'custom_padding.dart';
 
-// class CustomBottomNavBar extends StatelessWidget {
-//   const CustomBottomNavBar({
-//     Key? key,
-//     required this.selectedMenu,
-//   }) : super(key: key);
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-//   final MenuState selectedMenu;
+class CustomBottomNavBar extends StatelessWidget {
+  const CustomBottomNavBar({
+    Key? key,
+    required this.selectedMenu,
+  }) : super(key: key);
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       padding: kPaddingSymetricVerticalSmall,
-//       decoration: BoxDecoration(
-//         color: kWhiteColorShade900,
-//         boxShadow: [
-//           BoxShadow(
-//             color: kGreyColorShade50.withOpacity(0.15),
-//             blurRadius: 10,
-//             spreadRadius: 5,
-//           ),
-//         ],
-//         borderRadius: const BorderRadius.only(
-//           topLeft: Radius.circular(40),
-//           topRight: Radius.circular(40),
-//         ),
-//       ),
-//       child: SafeArea(
-//         top: false,
-//         child: Row(
-//           mainAxisAlignment: MainAxisAlignment.spaceAround,
-//           children: [
-//             IconButton(
-//               icon: SvgPicture.asset(
-//                 "assets/icons/svg/Shop Icon.svg",
-//                 color: MenuState.home == selectedMenu
-//                     ? kBlueColorShade400
-//                     : kGreyColorShade400,
-//               ),
-//               onPressed: () => Navigator.pushNamed(
-//                 context,
-//                 Routes.home,
-//               ),
-//             ),
-//             IconButton(
-//               icon: SvgPicture.asset(
-//                 "assets/icons/svg/Heart Icon.svg",
-//                 color: MenuState.myLearning == selectedMenu
-//                     ? kBlueColorShade400
-//                     : kGreyColorShade400,
-//               ),
-//               onPressed: () => Navigator.pushNamed(
-//                 context,
-//                 Routes.myLearning,
-//               ),
-//             ),
-//             IconButton(
-//               icon: SvgPicture.asset(
-//                 "assets/icons/svg/Chat bubble Icon.svg",
-//                 color: MenuState.myQuiz == selectedMenu
-//                     ? kBlueColorShade400
-//                     : kGreyColorShade400,
-//               ),
-//               onPressed: () => Navigator.pushNamed(
-//                 context,
-//                 Routes.myQuiz,
-//               ),
-//             ),
-//             IconButton(
-//               icon: SvgPicture.asset(
-//                 "assets/icons/svg/User Icon.svg",
-//                 color: MenuState.profile == selectedMenu
-//                     ? kBlueColorShade400
-//                     : kGreyColorShade400,
-//               ),
-//               onPressed: () => Navigator.pushNamed(
-//                 context,
-//                 Routes.profile,
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
+  final MenuState selectedMenu;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: kPaddingAllMedium,
+      child: Container(
+        padding: kPaddingSymetricVerticalSmall / 1.5,
+        decoration: BoxDecoration(
+          color: kSecondaryColor,
+          borderRadius: kBorderRadiusSmall,
+        ),
+        child: SafeArea(
+          top: false,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              IconButton(
+                icon: Icon(
+                  Icons.view_in_ar_outlined,
+                  color: MenuState.home == selectedMenu
+                      ? kAccentColor
+                      : kAccentColor.withOpacity(0.3),
+                ),
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  Routes.home,
+                ),
+              ),
+              IconButton(
+                icon: Icon(
+                  Icons.settings_rounded,
+                  color: MenuState.setting == selectedMenu
+                      ? kAccentColor
+                      : kAccentColor.withOpacity(0.3),
+                ),
+                onPressed: () => Navigator.pushNamed(
+                  context,
+                  Routes.setting,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

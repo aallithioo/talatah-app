@@ -39,7 +39,7 @@ class CustomBottomNavBar extends StatelessWidget {
             children: [
               IconButton(
                 icon: Icon(
-                  Icons.view_in_ar_outlined,
+                  Icons.crop_free,
                   color: MenuState.home == selectedMenu
                       ? kAccentColor
                       : kAccentColor.withOpacity(0.3),

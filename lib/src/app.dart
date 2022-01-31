@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.home,
+      initialRoute: Routes.splash,
       routes: {
         Routes.splash: (_) => const SplashScreen(),
         Routes.intro: (_) => const IntroScreen(),

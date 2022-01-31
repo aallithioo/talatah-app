@@ -176,10 +176,17 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               TextField(
+                cursorColor: kSecondaryColor,
                 controller: _vendorController,
                 maxLines: 1,
                 maxLength: 64,
                 decoration: InputDecoration(
+                  contentPadding: EdgeInsets.fromLTRB(
+                    kSizeSmall,
+                    kSizeSmall,
+                    kSizeSmall,
+                    kSizeSmall,
+                  ),
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
                     borderSide: BorderSide.none,
@@ -197,10 +204,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               kSizeBoxVerticalSmall,
               TextField(
+                cursorColor: kSecondaryColor,
                 controller: _emailController,
                 maxLines: 1,
                 maxLength: 64,
                 decoration: InputDecoration(
+                  contentPadding: EdgeInsets.fromLTRB(
+                    kSizeSmall,
+                    kSizeSmall,
+                    kSizeSmall,
+                    kSizeSmall,
+                  ),
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
                     borderSide: BorderSide.none,
@@ -218,11 +232,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               kSizeBoxVerticalSmall,
               TextField(
+                cursorColor: kSecondaryColor,
                 controller: _passwordController,
                 maxLines: 1,
                 maxLength: 64,
-                showCursor: false,
                 decoration: InputDecoration(
+                  contentPadding: EdgeInsets.fromLTRB(
+                    kSizeSmall,
+                    kSizeSmall,
+                    kSizeSmall,
+                    kSizeSmall,
+                  ),
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
                     borderSide: BorderSide.none,
@@ -308,6 +328,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           onPressed: () {
+                            _vendorController.text = '';
+                            _emailController.text = '';
+                            _passwordController.text = '';
+
                             Navigator.of(context).pop();
                           },
                           child: SizedBox(
@@ -371,6 +395,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           onPressed: () {
                             _deleteItem(itemKey);
 
+                            _vendorController.text = '';
+                            _emailController.text = '';
+                            _passwordController.text = '';
+
                             Navigator.of(context).pop();
                           },
                           child: SizedBox(
@@ -400,6 +428,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           onPressed: () {
+                            _vendorController.text = '';
+                            _emailController.text = '';
+                            _passwordController.text = '';
+
                             Navigator.of(context).pop();
                           },
                           child: SizedBox(
@@ -481,7 +513,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           Text(
                             currentItem['email'],
                             style: kThioAlli.textTheme.bodyText2!.copyWith(
-                              color: kAccentColor,
+                              // color: kAccentColor,
+                              color: kAccentColor.withOpacity(0.6),
                               fontWeight: kFontWeightLight,
                             ),
                           ),
@@ -492,7 +525,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 currentItem['password'],
                                 style: kThioAlli.textTheme.bodyText2!.copyWith(
-                                  color: kAccentColor,
+                                  // color: kAccentColor,
+                                  color: kAccentColor.withOpacity(0.6),
                                   fontWeight: kFontWeightLight,
                                 ),
                               ),

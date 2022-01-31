@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:talatah/src/app/widgets/custom_appbar.dart';
 
 import '../../app/themes/color.dart';
 import '../../app/themes/fontweight.dart';
@@ -87,17 +88,13 @@ class _HomeScreenState extends State<HomeScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-/*
-    This function will be triggered when the floating button is pressed.
-    It will alse be trigerred when you want to update an item
-  */
+  // This function will be triggered when the floating button is pressed.
+  //  It will alse be trigerred when you want to update an item
   void _showForm(BuildContext context, int? itemKey) async {
-    /*
-      itemKey == null -> create a new item
-      itemKey != null -> update an existing item
-    */
+    // itemKey == null -> create a new item
+    // itemKey != null -> update an existing item
 
-    if (itemKey == null) {
+    if (itemKey != null) {
       final existingItem =
           _items.firstWhere((element) => element['key'] == itemKey);
       _vendorController.text = existingItem['vendor'];
@@ -105,122 +102,111 @@ class _HomeScreenState extends State<HomeScreen> {
       _passwordController.text = existingItem['password'];
     }
 
-    showDialog(
+    showModalBottomSheet(
       context: context,
+      isScrollControlled: true,
+      elevation: 5,
       builder: (_) {
-        return Center(
-          child: Container(
-            padding: kPaddingSymetricHorizontalSmall,
-            child: Form(
-              child: Column(
-                children: [
-                  kSizeBoxVerticalSmall,
-                  // TODO: Add a text field for the vendor
-                  Container(
-                    height: 60,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: kBorderRadiusSmall,
-                    ),
-                    child: TextFormField(
-                      controller: _vendorController,
-                      decoration: InputDecoration(
-                        hintText: 'e.g. Google',
-                        hintStyle: kThioAlli.textTheme.caption!.copyWith(
-                          color: kGreyColorShade500,
-                          fontSize: kSizeSmall / 1.5,
-                          fontWeight: kFontWeightLight,
-                        ),
-                        filled: true,
-                        fillColor: kGreyColorShade50,
-                      ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Please enter a vendor';
-                        }
-                        return null;
-                      },
-                    ),
+        return Container(
+          // height: MediaQuery.of(context).size.height / 2.35,
+          padding: kPaddingAllMedium,
+          color: kSecondaryColor,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              // TODO: Add a text field for the vendor
+              TextField(
+                controller: _vendorController,
+                maxLines: 1,
+                maxLength: 24,
+                decoration: InputDecoration(
+                  counter: const SizedBox(),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: kBorderRadiusTiny,
                   ),
-                  kSizeBoxVerticalSmall,
-                  // TODO: Add a text field for email
-                  Container(
-                    height: 60,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: kBorderRadiusSmall,
-                    ),
-                    child: TextFormField(
-                      controller: _emailController,
-                      decoration: InputDecoration(
-                        hintText: 'e.g. johndoe@example.com',
-                        hintStyle: kThioAlli.textTheme.caption!.copyWith(
-                          color: kGreyColorShade500,
-                          fontSize: kSizeSmall / 1.5,
-                          fontWeight: kFontWeightLight,
-                        ),
-                        filled: true,
-                        fillColor: kGreyColorShade50,
-                      ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Please enter an email';
-                        }
-                        return null;
-                      },
-                    ),
+                  hintText: 'e.g. Google',
+                  hintStyle: kThioAlli.textTheme.caption!.copyWith(
+                    color: kGreyColorShade500,
+                    fontSize: kSizeSmall / 1.5,
+                    fontWeight: kFontWeightLight,
                   ),
-                  kSizeBoxVerticalSmall,
-                  // TODO: Add a text field for password
-                  Container(
-                    height: 60,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                      borderRadius: kBorderRadiusSmall,
-                    ),
-                    child: TextFormField(
-                      controller: _passwordController,
-                      decoration: InputDecoration(
-                        hintStyle: kThioAlli.textTheme.caption!.copyWith(
-                          color: kGreyColorShade500,
-                          fontSize: kSizeSmall / 1.5,
-                          fontWeight: kFontWeightLight,
-                        ),
-                        filled: true,
-                        fillColor: kGreyColorShade50,
-                      ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Please enter a password';
-                        }
-                        return null;
-                      },
-                    ),
-                  ),
-                  kSizeBoxVerticalSmall,
-                  // TODO: Add a button to save the item
-                  Container(
-                    width: MediaQuery.of(context).size.width / 2.5,
-                    height: 60,
-                    decoration: BoxDecoration(
-                      color: kAccentColor,
-                      borderRadius: kBorderRadiusSmall,
-                    ),
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Create'.toUpperCase(),
-                        style: kThioAlli.textTheme.button!.copyWith(
-                          color: kSecondaryColor,
-                          fontWeight: kFontWeightLight,
-                        ),
-                      ),
-                    ),
-                  ),
-                  kSizeBoxVerticalSmall,
-                ],
+                  filled: true,
+                  fillColor: kAccentColor,
+                ),
               ),
-            ),
+              kSizeBoxVerticalSmall,
+              // TODO: Add a text field for email
+              TextField(
+                controller: _emailController,
+                maxLines: 1,
+                maxLength: 24,
+                decoration: InputDecoration(
+                  counter: const SizedBox(),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: kBorderRadiusTiny,
+                  ),
+                  hintText: 'e.g. johndoe@example.com',
+                  hintStyle: kThioAlli.textTheme.caption!.copyWith(
+                    color: kGreyColorShade500,
+                    fontSize: kSizeSmall / 1.5,
+                    fontWeight: kFontWeightLight,
+                  ),
+                  filled: true,
+                  fillColor: kAccentColor,
+                ),
+              ),
+              kSizeBoxVerticalSmall,
+              // TODO: Add a text field for password
+              TextField(
+                controller: _passwordController,
+                maxLines: 1,
+                maxLength: 24,
+                decoration: InputDecoration(
+                  counter: const SizedBox(),
+                  border: UnderlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: kBorderRadiusTiny,
+                  ),
+                  hintText: 'j0hnD0e@123',
+                  hintStyle: kThioAlli.textTheme.caption!.copyWith(
+                    color: kGreyColorShade500,
+                    fontSize: kSizeSmall / 1.5,
+                    fontWeight: kFontWeightLight,
+                  ),
+                  filled: true,
+                  fillColor: kAccentColor,
+                ),
+              ),
+              kSizeBoxVerticalSmall,
+              // TODO: Add a button to save the item
+              ElevatedButton(
+                onPressed: () async {
+                  if (itemKey == null) {
+                    _createItem({
+                      'vendor': _vendorController.text,
+                      'email': _emailController.text,
+                      'password': _passwordController.text,
+                    });
+                  }
+
+                  _vendorController.clear();
+                  _emailController.clear();
+                  _passwordController.clear();
+
+                  Navigator.of(context).pop();
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 50,
+                  child: Center(
+                    child: Text('Create'),
+                  ),
+                ),
+              ),
+            ],
           ),
         );
       },
@@ -231,6 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
+      appBar: kAppBar('talatah'),
       body: SafeArea(
         child: Padding(
           padding: kPaddingSymetricHorizontalLarge,

@@ -357,80 +357,81 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       appBar: kAppBar('talatah'),
-      body: SafeArea(
-        child: Padding(
-          padding: kPaddingSymetricHorizontalLarge,
-          child: _items.isEmpty
-              ? Center(
-                  child: Text(
-                    'No data found',
-                    style: kThioAlli.textTheme.bodyText1!.copyWith(
-                      color: kAccentColor,
-                      fontWeight: kFontWeightLight,
-                    ),
+      body: _items.isEmpty
+          ? Padding(
+              padding: kPaddingSymetricHorizontalLarge,
+              child: Center(
+                child: Text(
+                  'No data found',
+                  style: kThioAlli.textTheme.bodyText1!.copyWith(
+                    color: kAccentColor,
+                    fontWeight: kFontWeightLight,
                   ),
-                )
-              : ListView.builder(
-                  itemCount: _items.length,
-                  itemBuilder: (_, index) {
-                    final currentItem = _items[index];
-                    return GestureDetector(
-                      // TODO: Add onLongPress
-                      onLongPress: () => _showForm(context, currentItem['key']),
-                      // TODO: Add box
-                      child: Container(
-                        margin: EdgeInsets.only(bottom: kSizeSmall),
-                        padding: EdgeInsets.symmetric(
-                          vertical: kSizeSmall,
-                          horizontal: kSizeMedium,
-                        ),
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: kSecondaryColor,
-                          borderRadius: kBorderRadiusTiny,
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            // TODO: Display vendor data
-                            Text(
-                              currentItem['vendor'],
-                              style: kThioAlli.textTheme.headline5!.copyWith(
-                                color: kAccentColor,
-                                fontWeight: kFontWeightBold,
-                              ),
-                            ),
-                            const SizedBox(height: 3),
-                            Divider(
-                              color: kAccentColor.withOpacity(0.2),
-                              thickness: 1,
-                            ),
-                            const SizedBox(height: 3),
-                            // TODO: Display email data
-                            Text(
-                              currentItem['email'],
-                              style: kThioAlli.textTheme.bodyText2!.copyWith(
-                                color: kAccentColor,
-                                fontWeight: kFontWeightLight,
-                              ),
-                            ),
-                            const SizedBox(height: 2),
-                            // TODO: Display password data
-                            Text(
-                              currentItem['password'] = '••••••••••••••••',
-                              style: kThioAlli.textTheme.bodyText2!.copyWith(
-                                color: kAccentColor,
-                                fontWeight: kFontWeightLight,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  },
                 ),
-        ),
-      ),
+              ),
+            )
+          : Padding(
+              padding: kPaddingSymetricHorizontalLarge,
+              child: ListView.builder(
+                itemCount: _items.length,
+                itemBuilder: (_, index) {
+                  final currentItem = _items[index];
+                  return GestureDetector(
+                    // TODO: Add onLongPress
+                    onLongPress: () => _showForm(context, currentItem['key']),
+                    // TODO: Add box
+                    child: Container(
+                      margin: EdgeInsets.only(bottom: kSizeSmall),
+                      padding: EdgeInsets.symmetric(
+                        vertical: kSizeSmall,
+                        horizontal: kSizeMedium,
+                      ),
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: kSecondaryColor,
+                        borderRadius: kBorderRadiusTiny,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // TODO: Display vendor data
+                          Text(
+                            currentItem['vendor'],
+                            style: kThioAlli.textTheme.headline5!.copyWith(
+                              color: kAccentColor,
+                              fontWeight: kFontWeightBold,
+                            ),
+                          ),
+                          const SizedBox(height: 3),
+                          Divider(
+                            color: kAccentColor.withOpacity(0.2),
+                            thickness: 1,
+                          ),
+                          const SizedBox(height: 3),
+                          // TODO: Display email data
+                          Text(
+                            currentItem['email'],
+                            style: kThioAlli.textTheme.bodyText2!.copyWith(
+                              color: kAccentColor,
+                              fontWeight: kFontWeightLight,
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          // TODO: Display password data
+                          Text(
+                            currentItem['password'] = '••••••••••••••••',
+                            style: kThioAlli.textTheme.bodyText2!.copyWith(
+                              color: kAccentColor,
+                              fontWeight: kFontWeightLight,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
       floatingActionButton: Container(
         margin: EdgeInsets.only(right: kSizeTiny),
         child: FloatingActionButton(

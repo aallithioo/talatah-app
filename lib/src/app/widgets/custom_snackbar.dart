@@ -11,12 +11,12 @@ SnackBar? kSnackBar(String message) {
   return SnackBar(
     margin: kMarginAllLarge,
     behavior: SnackBarBehavior.floating,
-    backgroundColor: kErrorColor,
+    backgroundColor: kSuccessColor,
     shape: kRoundedBorderRadiusMedium,
     dismissDirection: DismissDirection.horizontal,
     duration: const Duration(milliseconds: 3000),
     content: GetSnackBar(
-      title: "Oops!",
+      title: "Success!",
       message: message,
       icon: Icon(
         Icons.notifications_on_rounded,
@@ -25,7 +25,7 @@ SnackBar? kSnackBar(String message) {
       ),
       snackPosition: SnackPosition.TOP,
       snackStyle: SnackStyle.FLOATING,
-      backgroundColor: kErrorColor,
+      backgroundColor: kSuccessColor,
       margin: kMarginAllSmall,
       forwardAnimationCurve: Curves.easeOutBack,
       reverseAnimationCurve: Curves.easeInBack,

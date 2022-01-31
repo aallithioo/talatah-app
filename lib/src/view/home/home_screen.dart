@@ -115,6 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Column(
                 children: [
                   kSizeBoxVerticalSmall,
+                  // TODO: Add a text field for the vendor
                   Container(
                     height: 60,
                     width: MediaQuery.of(context).size.width,
@@ -142,6 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   kSizeBoxVerticalSmall,
+                  // TODO: Add a text field for email
                   Container(
                     height: 60,
                     width: MediaQuery.of(context).size.width,
@@ -169,6 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   kSizeBoxVerticalSmall,
+                  // TODO: Add a text field for password
                   Container(
                     height: 60,
                     width: MediaQuery.of(context).size.width,
@@ -195,6 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   kSizeBoxVerticalSmall,
+                  // TODO: Add a button to save the item
                   Container(
                     width: MediaQuery.of(context).size.width / 2.5,
                     height: 60,
@@ -290,7 +294,7 @@ class _HomeScreenState extends State<HomeScreen> {
         onPressed: () => _showForm(context, null),
         child: Icon(
           Icons.add,
-          color: kSecondaryColor,
+          color: kAccentColor.withOpacity(0.7),
         ),
       ),
     );

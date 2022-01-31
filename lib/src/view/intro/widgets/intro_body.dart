@@ -81,7 +81,7 @@ class _IntroBodyState extends State<IntroBody> {
                 height: 60,
                 decoration: BoxDecoration(
                   color: kTransparentColor,
-                  borderRadius: kBorderRadiusHuge,
+                  borderRadius: kBorderRadiusTiny,
                   border: Border.all(
                     color: kAccentColor,
                     width: 2,

@@ -11,6 +11,7 @@ Color kTransparentColor = Colors.transparent;
 // Main Colors
 Color kPrimaryColor = const Color(0xFF050527);
 Color kSecondaryColor = const Color(0xFF181837);
+Color kTertiaryColor = const Color(0xFF2E2E4E);
 Color kAccentColor = const Color(0xFFC4C4C4);
 
 // Color kPrimaryColor = const Color(0xFF121226);

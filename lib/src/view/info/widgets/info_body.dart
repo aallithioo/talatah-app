@@ -61,7 +61,7 @@ class InfoBody extends StatelessWidget {
                         color: kAccentColor,
                         width: 2,
                       ),
-                      borderRadius: kBorderRadiusMedium,
+                      borderRadius: kBorderRadiusTiny,
                     ),
                     child: TextButton(
                       onPressed: () {

@@ -176,6 +176,9 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               TextField(
+                style: kThioAlli.textTheme.bodyText2!.copyWith(
+                  color: kAccentColor,
+                ),
                 cursorColor: kSecondaryColor,
                 controller: _vendorController,
                 maxLines: 1,
@@ -199,11 +202,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontWeight: kFontWeightLight,
                   ),
                   filled: true,
-                  fillColor: kGreyColorShade50,
+                  fillColor: kTertiaryColor.withOpacity(0.5),
                 ),
               ),
               kSizeBoxVerticalSmall,
               TextField(
+                style: kThioAlli.textTheme.bodyText2!.copyWith(
+                  color: kAccentColor,
+                ),
                 cursorColor: kSecondaryColor,
                 controller: _emailController,
                 maxLines: 1,
@@ -227,11 +233,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontWeight: kFontWeightLight,
                   ),
                   filled: true,
-                  fillColor: kGreyColorShade50,
+                  fillColor: kTertiaryColor.withOpacity(0.5),
                 ),
               ),
               kSizeBoxVerticalSmall,
               TextField(
+                style: kThioAlli.textTheme.bodyText2!.copyWith(
+                  color: kAccentColor,
+                ),
                 cursorColor: kSecondaryColor,
                 controller: _passwordController,
                 maxLines: 1,
@@ -255,7 +264,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontWeight: kFontWeightLight,
                   ),
                   filled: true,
-                  fillColor: kGreyColorShade50,
+                  fillColor: kTertiaryColor.withOpacity(0.5),
                 ),
               ),
               kSizeBoxVerticalSmall,

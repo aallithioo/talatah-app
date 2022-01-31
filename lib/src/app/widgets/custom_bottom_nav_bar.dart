@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talatah/src/app/themes/size.dart';
 
 import '../widgets/custom_border.dart';
 
@@ -19,12 +20,17 @@ class CustomBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: kPaddingAllMedium,
+      padding: EdgeInsets.only(
+        top: kSizeSmall,
+        left: kSizeMedium,
+        right: kSizeMedium,
+        bottom: kSizeMedium,
+      ),
       child: Container(
         padding: kPaddingSymetricVerticalSmall / 1.5,
         decoration: BoxDecoration(
           color: kSecondaryColor,
-          borderRadius: kBorderRadiusSmall,
+          borderRadius: kBorderRadiusTiny,
         ),
         child: SafeArea(
           top: false,

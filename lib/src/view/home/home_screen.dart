@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:talatah/src/app/enums.dart';
 import 'package:talatah/src/app/widgets/custom_appbar.dart';
+import 'package:talatah/src/app/widgets/custom_bottom_nav_bar.dart';
 
 import '../../app/themes/color.dart';
 import '../../app/themes/fontweight.dart';
@@ -164,6 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 controller: _passwordController,
                 maxLines: 1,
                 maxLength: 24,
+                showCursor: false,
                 decoration: InputDecoration(
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
@@ -244,9 +247,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       // TODO: Add box
                       child: Container(
                         margin: EdgeInsets.only(bottom: kSizeSmall),
-                        padding: kPaddingSymetricHorizontalMedium,
+                        padding: EdgeInsets.symmetric(
+                          vertical: kSizeSmall,
+                          horizontal: kSizeMedium,
+                        ),
                         width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: kSecondaryColor,
+                          borderRadius: kBorderRadiusTiny,
+                        ),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             // TODO: Display vendor data
                             Text(
@@ -259,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             // TODO: Display email data
                             Text(
                               currentItem['email'],
-                              style: kThioAlli.textTheme.bodyText1!.copyWith(
+                              style: kThioAlli.textTheme.bodyText2!.copyWith(
                                 color: kAccentColor,
                                 fontWeight: kFontWeightLight,
                               ),
@@ -267,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             // TODO: Display password data
                             Text(
                               currentItem['password'],
-                              style: kThioAlli.textTheme.bodyText1!.copyWith(
+                              style: kThioAlli.textTheme.bodyText2!.copyWith(
                                 color: kAccentColor,
                                 fontWeight: kFontWeightLight,
                               ),
@@ -280,14 +291,28 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: kSecondaryColor,
-        onPressed: () => _showForm(context, null),
-        child: Icon(
-          Icons.add,
-          color: kAccentColor.withOpacity(0.7),
+      floatingActionButton: Container(
+        margin: EdgeInsets.only(right: kSizeTiny),
+        child: FloatingActionButton(
+          backgroundColor: kBlueColorShade400.withOpacity(0.5),
+          shape: ShapeBorder.lerp(
+            RoundedRectangleBorder(
+              borderRadius: kBorderRadiusTiny,
+            ),
+            RoundedRectangleBorder(
+              borderRadius: kBorderRadiusTiny,
+            ),
+            0.5,
+          ),
+          onPressed: () => _showForm(context, null),
+          child: Icon(
+            Icons.add,
+            color: kAccentColor.withOpacity(0.7),
+          ),
         ),
       ),
+      bottomNavigationBar:
+          const CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }

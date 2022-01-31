@@ -229,7 +229,6 @@ class _HomeScreenState extends State<HomeScreen> {
               // TODO: Add a text field for password
               TextField(
                 controller: _passwordController,
-                obscuringCharacter: '•',
                 maxLines: 1,
                 maxLength: 64,
                 showCursor: false,
@@ -507,9 +506,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                currentItem['password'] != null
-                                    ? '••••••••••••••••'
-                                    : '',
+                                currentItem['password'],
                                 style: kThioAlli.textTheme.bodyText2!.copyWith(
                                   color: kAccentColor,
                                   fontWeight: kFontWeightLight,

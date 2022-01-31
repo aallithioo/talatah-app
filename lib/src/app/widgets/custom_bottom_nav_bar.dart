@@ -1,15 +1,12 @@
-import 'package:aallithioo/src/app/widgets/custom_border.dart';
+import 'package:flutter/material.dart';
+
+import '../widgets/custom_border.dart';
 
 import '../enums.dart';
-
 import '../routes/route.dart';
-
 import '../themes/color.dart';
-
+import 'custom_border.dart';
 import 'custom_padding.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({

@@ -124,16 +124,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
                     borderSide: BorderSide.none,
-                    borderRadius: kBorderRadiusTiny,
+                    borderRadius: kBorderRadiusTiny / 2,
                   ),
                   hintText: 'e.g. Google',
                   hintStyle: kThioAlli.textTheme.caption!.copyWith(
-                    color: kGreyColorShade500,
-                    fontSize: kSizeSmall / 1.5,
+                    color: kGreyColorShade400,
+                    fontSize: kSizeSmall / 1.3,
                     fontWeight: kFontWeightLight,
                   ),
                   filled: true,
-                  fillColor: kAccentColor,
+                  fillColor: kGreyColorShade50,
                 ),
               ),
               kSizeBoxVerticalSmall,
@@ -146,16 +146,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
                     borderSide: BorderSide.none,
-                    borderRadius: kBorderRadiusTiny,
+                    borderRadius: kBorderRadiusTiny / 2,
                   ),
                   hintText: 'e.g. johndoe@example.com',
                   hintStyle: kThioAlli.textTheme.caption!.copyWith(
-                    color: kGreyColorShade500,
-                    fontSize: kSizeSmall / 1.5,
+                    color: kGreyColorShade400,
+                    fontSize: kSizeSmall / 1.3,
                     fontWeight: kFontWeightLight,
                   ),
                   filled: true,
-                  fillColor: kAccentColor,
+                  fillColor: kGreyColorShade50,
                 ),
               ),
               kSizeBoxVerticalSmall,
@@ -168,21 +168,25 @@ class _HomeScreenState extends State<HomeScreen> {
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
                     borderSide: BorderSide.none,
-                    borderRadius: kBorderRadiusTiny,
+                    borderRadius: kBorderRadiusTiny / 2,
                   ),
                   hintText: 'j0hnD0e@123',
                   hintStyle: kThioAlli.textTheme.caption!.copyWith(
-                    color: kGreyColorShade500,
-                    fontSize: kSizeSmall / 1.5,
+                    color: kGreyColorShade400,
+                    fontSize: kSizeSmall / 1.3,
                     fontWeight: kFontWeightLight,
                   ),
                   filled: true,
-                  fillColor: kAccentColor,
+                  fillColor: kGreyColorShade50,
                 ),
               ),
               kSizeBoxVerticalSmall,
               // TODO: Add a button to save the item
               ElevatedButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all(kBlueColorShade400),
+                ),
                 onPressed: () async {
                   if (itemKey == null) {
                     _createItem({
@@ -202,7 +206,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: double.infinity,
                   height: 50,
                   child: Center(
-                    child: Text('Create'),
+                    child: Text('Create'.toUpperCase()),
                   ),
                 ),
               ),

@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
       elevation: 5,
       builder: (_) {
         return Container(
-          // height: MediaQuery.of(context).size.height / 2.35,
+          // height: MediaQuery.of(context).size.height / 2,
           padding: kPaddingAllMedium,
           color: kSecondaryColor,
           child: Column(
@@ -186,44 +186,95 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               kSizeBoxVerticalSmall,
               // TODO: Add a button to save the item
-              ElevatedButton(
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(kBlueColorShade400),
-                ),
-                onPressed: () async {
-                  if (itemKey == null) {
-                    _createItem({
-                      'vendor': _vendorController.text,
-                      'email': _emailController.text,
-                      'password': _passwordController.text,
-                    });
-                  } else {
-                    _updateItem(itemKey, {
-                      'vendor': _vendorController.text.trim(),
-                      'email': _emailController.text.trim(),
-                      'password': _passwordController.text.trim(),
-                    });
-                  }
+              itemKey == null
+                  ? ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all(kBlueColorShade400),
+                      ),
+                      onPressed: () {
+                        _createItem({
+                          'vendor': _vendorController.text,
+                          'email': _emailController.text,
+                          'password': _passwordController.text,
+                        });
 
-                  _vendorController.clear();
-                  _emailController.clear();
-                  _passwordController.clear();
+                        _vendorController.text = '';
+                        _emailController.text = '';
+                        _passwordController.text = '';
 
-                  Navigator.of(context).pop();
-                },
-                child: Container(
-                  width: double.infinity,
-                  height: 50,
-                  child: Center(
-                    child: Text(
-                      itemKey == null
-                          ? 'Create'.toUpperCase()
-                          : 'Update'.toUpperCase(),
+                        Navigator.of(context).pop();
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        height: 60,
+                        child: Center(
+                          child: Text(
+                            'Create'.toUpperCase(),
+                          ),
+                        ),
+                      ),
+                    )
+                  : Column(
+                      children: [
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(kBlueColorShade400),
+                          ),
+                          onPressed: () {
+                            _updateItem(itemKey, {
+                              'vendor': _vendorController.text.trim(),
+                              'email': _emailController.text.trim(),
+                              'password': _passwordController.text.trim(),
+                            });
+
+                            _vendorController.text.trim();
+                            _emailController.text.trim();
+                            _passwordController.text.trim();
+
+                            Navigator.of(context).pop();
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            height: 60,
+                            child: Center(
+                              child: Text(
+                                'Update'.toUpperCase(),
+                              ),
+                            ),
+                          ),
+                        ),
+                        kSizeBoxVerticalSmall,
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(kSecondaryColor),
+                            side: MaterialStateProperty.all(
+                              BorderSide(
+                                color: kErrorColor,
+                                width: 2,
+                              ),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            height: 60,
+                            child: Center(
+                              child: Text(
+                                'Cancel'.toUpperCase(),
+                                style: kThioAlli.textTheme.button!.copyWith(
+                                  color: kErrorColor,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                ),
-              ),
             ],
           ),
         );

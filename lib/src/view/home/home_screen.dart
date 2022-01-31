@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:talatah/src/app/enums.dart';
 import 'package:talatah/src/app/widgets/custom_appbar.dart';
@@ -72,6 +73,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _updateItem(int itemKey, Map<String, dynamic> item) async {
     await _box.put(itemKey, item);
     _getItems();
+
+    Get.snackbar('Success!', 'sefeaf');
   }
 
 // TODO: Delete an item
@@ -80,9 +83,23 @@ class _HomeScreenState extends State<HomeScreen> {
     _getItems();
 
     // TODO: Display a snackbar
-    ScaffoldMessenger.of(context).showSnackBar(
-      kSnackBar('Item has removed')!,
+    Get.snackbar(
+      "GeeksforGeeks",
+      "Hello everyone",
+      icon: Icon(Icons.person, color: Colors.white),
+      snackPosition: SnackPosition.TOP,
+      backgroundColor: Colors.green,
+      borderRadius: 20,
+      margin: EdgeInsets.all(15),
+      colorText: Colors.white,
+      duration: Duration(seconds: 4),
+      isDismissible: true,
+      dismissDirection: DismissDirection.horizontal,
+      forwardAnimationCurve: Curves.easeOutBack,
     );
+    // ScaffoldMessenger.of(context).showSnackBar(
+    //   kSnackBar('Item has removed')!,
+    // );
   }
 
 // TextFields' controllers
@@ -378,7 +395,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   final currentItem = _items[index];
                   return GestureDetector(
                     // TODO: Add onLongPress
-                    onLongPress: () => _showForm(context, currentItem['key']),
+                    onTap: () => _showForm(context, currentItem['key']),
                     // TODO: Add box
                     child: Container(
                       margin: EdgeInsets.only(bottom: kSizeSmall),
@@ -419,7 +436,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           const SizedBox(height: 2),
                           // TODO: Display password data
                           Text(
-                            currentItem['password'] = '••••••••••••••••',
+                            '••••••••••••••••',
                             style: kThioAlli.textTheme.bodyText2!.copyWith(
                               color: kAccentColor,
                               fontWeight: kFontWeightLight,

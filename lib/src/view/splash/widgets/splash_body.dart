@@ -12,6 +12,8 @@ class SplashBody extends StatelessWidget {
           child: Text(
             'talatah',
             style: kThioAlli.textTheme.headline6!.copyWith(
+              color: kWhiteColorShade900,
+              fontSize: kSizeMedium,
               fontWeight: kFontWeightBold,
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:talatah/src/app/themes/size.dart';
 
 import '../../app/routes/route.dart';
 import '../../app/themes/fontweight.dart';

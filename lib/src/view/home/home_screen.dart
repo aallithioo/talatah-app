@@ -164,6 +164,7 @@ class _HomeScreenState extends State<HomeScreen> {
               // TODO: Add a text field for password
               TextField(
                 controller: _passwordController,
+                obscuringCharacter: '•',
                 maxLines: 1,
                 maxLength: 24,
                 showCursor: false,
@@ -197,6 +198,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       'email': _emailController.text,
                       'password': _passwordController.text,
                     });
+                  } else {
+                    _updateItem(itemKey, {
+                      'vendor': _vendorController.text.trim(),
+                      'email': _emailController.text.trim(),
+                      'password': _passwordController.text.trim(),
+                    });
                   }
 
                   _vendorController.clear();
@@ -209,7 +216,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: double.infinity,
                   height: 50,
                   child: Center(
-                    child: Text('Create'.toUpperCase()),
+                    child: Text(
+                      itemKey == null
+                          ? 'Create'.toUpperCase()
+                          : 'Update'.toUpperCase(),
+                    ),
                   ),
                 ),
               ),
@@ -244,6 +255,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     final currentItem = _items[index];
                     return GestureDetector(
                       // TODO: Add onLongPress
+                      onLongPress: () => _showForm(context, currentItem['key']),
                       // TODO: Add box
                       child: Container(
                         margin: EdgeInsets.only(bottom: kSizeSmall),
@@ -267,6 +279,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: kFontWeightBold,
                               ),
                             ),
+                            const SizedBox(height: 3),
+                            Divider(
+                              color: kAccentColor.withOpacity(0.2),
+                              thickness: 1,
+                            ),
+                            const SizedBox(height: 3),
                             // TODO: Display email data
                             Text(
                               currentItem['email'],
@@ -275,9 +293,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 fontWeight: kFontWeightLight,
                               ),
                             ),
+                            const SizedBox(height: 2),
                             // TODO: Display password data
                             Text(
-                              currentItem['password'],
+                              currentItem['password'] = '••••••••••••••••',
                               style: kThioAlli.textTheme.bodyText2!.copyWith(
                                 color: kAccentColor,
                                 fontWeight: kFontWeightLight,
@@ -294,7 +313,7 @@ class _HomeScreenState extends State<HomeScreen> {
       floatingActionButton: Container(
         margin: EdgeInsets.only(right: kSizeTiny),
         child: FloatingActionButton(
-          backgroundColor: kBlueColorShade400.withOpacity(0.5),
+          backgroundColor: kBlueColorShade400.withOpacity(0.7),
           shape: ShapeBorder.lerp(
             RoundedRectangleBorder(
               borderRadius: kBorderRadiusTiny,

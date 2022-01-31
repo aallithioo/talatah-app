@@ -5,6 +5,13 @@ class SettingBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Padding(
+        padding: kPaddingSymetricHorizontalLarge,
+        child: Column(
+          children: [],
+        ),
+      ),
+    );
   }
 }

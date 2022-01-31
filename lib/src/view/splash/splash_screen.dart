@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../app/routes/route.dart';
+import '../../app/themes/fontweight.dart';
+import '../../app/themes/color.dart';
 import '../../app/themes/theme.dart';
 import '../../app/widgets/custom_padding.dart';
 
@@ -24,8 +26,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: SplashBody(),
+    return Scaffold(
+      backgroundColor: kPrimaryColor,
+      body: const SplashBody(),
     );
   }
 }

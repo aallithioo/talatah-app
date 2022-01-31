@@ -34,7 +34,6 @@ class _IntroBodyState extends State<IntroBody> {
         children: [
           const Spacer(),
           kSizeBoxVerticalMedium,
-          // TODO: App name or logo
           Text(
             'talatah',
             style: kThioAlli.textTheme.headline3!.copyWith(
@@ -43,7 +42,6 @@ class _IntroBodyState extends State<IntroBody> {
             ),
           ),
           kSizeBoxVerticalMedium,
-          // TODO: Main content & change it to a auto slider
           Expanded(
             flex: 4,
             child: PageView.builder(
@@ -58,8 +56,6 @@ class _IntroBodyState extends State<IntroBody> {
               },
             ),
           ),
-
-          // TODO: Add indicator
           Expanded(
             flex: 1,
             child: Row(
@@ -72,8 +68,6 @@ class _IntroBodyState extends State<IntroBody> {
               ],
             ),
           ),
-
-          // TODO: Next button
           Positioned.fill(
             child: Padding(
               padding: EdgeInsets.fromLTRB(
@@ -113,7 +107,6 @@ class _IntroBodyState extends State<IntroBody> {
     );
   }
 
-  // TODO: Add indicator animation
   AnimatedContainer indicator({int? index}) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),

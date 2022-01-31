@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../app/widgets/custom_padding.dart';
 import '../../app/enums.dart';
 import '../../app/themes/color.dart';
 import '../../app/widgets/custom_bottom_nav_bar.dart';

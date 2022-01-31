@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-import 'package:talatah/src/app/enums.dart';
-import 'package:talatah/src/app/widgets/custom_appbar.dart';
-import 'package:talatah/src/app/widgets/custom_bottom_nav_bar.dart';
-import 'package:talatah/src/app/widgets/custom_margin.dart';
 
+import '../../app/enums.dart';
 import '../../app/themes/color.dart';
 import '../../app/themes/fontweight.dart';
 import '../../app/themes/size.dart';
 import '../../app/themes/theme.dart';
+import '../../app/widgets/custom_appbar.dart';
+import '../../app/widgets/custom_bottom_nav_bar.dart';
+import '../../app/widgets/custom_margin.dart';
 import '../../app/widgets/custom_border.dart';
 import '../../app/widgets/custom_padding.dart';
 import '../../app/widgets/custom_sizebox.dart';
@@ -32,11 +32,9 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
 
-    // TODO: Load data from Hive
     _getItems();
   }
 
-// TODO: Get all items from Hive
   void _getItems() {
     final data = _box.keys.map(
       (key) {
@@ -57,7 +55,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-// TODO: Create a new item
   Future<void> _createItem(Map<String, dynamic> newItem) async {
     await _box.add(newItem);
     _getItems();
@@ -84,13 +81,11 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-// TODO: Read an item
 // Retieve a single item from Hive by using its key
   Map<String, dynamic> _readItem(String key) {
     return _box.get(key);
   }
 
-// TODO: Update an item
   Future<void> _updateItem(int itemKey, Map<String, dynamic> item) async {
     await _box.put(itemKey, item);
     _getItems();
@@ -117,12 +112,10 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-// TODO: Delete an item
   Future<void> _deleteItem(int itemKey) async {
     await _box.delete(itemKey);
     _getItems();
 
-    // TODO: Display a snackbar
     Get.snackbar(
       "Success",
       "Data deleted successfully",
@@ -182,7 +175,6 @@ class _HomeScreenState extends State<HomeScreen> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              // TODO: Add a text field for the vendor
               TextField(
                 controller: _vendorController,
                 maxLines: 1,
@@ -204,7 +196,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               kSizeBoxVerticalSmall,
-              // TODO: Add a text field for email
               TextField(
                 controller: _emailController,
                 maxLines: 1,
@@ -226,7 +217,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               kSizeBoxVerticalSmall,
-              // TODO: Add a text field for password
               TextField(
                 controller: _passwordController,
                 maxLines: 1,
@@ -249,7 +239,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               kSizeBoxVerticalSmall,
-              // TODO: Add a button to save the item
               itemKey == null
                   ? Column(
                       children: [
@@ -296,7 +285,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Navigator.of(context).pop();
                             }
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             height: 60,
                             child: Center(
@@ -321,7 +310,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             height: 60,
                             child: Center(
@@ -357,7 +346,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                             Navigator.of(context).pop();
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             height: 60,
                             child: Center(
@@ -384,7 +373,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                             Navigator.of(context).pop();
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             height: 60,
                             child: Center(
@@ -413,7 +402,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           onPressed: () {
                             Navigator.of(context).pop();
                           },
-                          child: Container(
+                          child: SizedBox(
                             width: double.infinity,
                             height: 60,
                             child: Center(
@@ -461,9 +450,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemBuilder: (_, index) {
                   final currentItem = _items[index];
                   return GestureDetector(
-                    // TODO: Add onLongPress
                     onTap: () => _showForm(context, currentItem['key']),
-                    // TODO: Add box
                     child: Container(
                       margin: EdgeInsets.only(bottom: kSizeSmall),
                       padding: EdgeInsets.symmetric(
@@ -478,7 +465,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // TODO: Display vendor data
                           Text(
                             currentItem['vendor'],
                             style: kThioAlli.textTheme.headline5!.copyWith(
@@ -492,7 +478,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             thickness: 1,
                           ),
                           const SizedBox(height: 3),
-                          // TODO: Display email data
                           Text(
                             currentItem['email'],
                             style: kThioAlli.textTheme.bodyText2!.copyWith(
@@ -501,7 +486,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           const SizedBox(height: 2),
-                          // TODO: Display password data
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

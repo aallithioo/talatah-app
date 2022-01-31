@@ -1,15 +1,13 @@
-import 'package:aallithioo/src/app/widgets/custom_border.dart';
+import 'package:flutter/material.dart';
+import 'package:talatah/src/app/themes/size.dart';
+
+import '../widgets/custom_border.dart';
 
 import '../enums.dart';
-
 import '../routes/route.dart';
-
 import '../themes/color.dart';
-
+import 'custom_border.dart';
 import 'custom_padding.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
@@ -22,12 +20,17 @@ class CustomBottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: kPaddingAllMedium,
+      padding: EdgeInsets.only(
+        top: kSizeSmall,
+        left: kSizeMedium,
+        right: kSizeMedium,
+        bottom: kSizeMedium,
+      ),
       child: Container(
         padding: kPaddingSymetricVerticalSmall / 1.5,
         decoration: BoxDecoration(
           color: kSecondaryColor,
-          borderRadius: kBorderRadiusSmall,
+          borderRadius: kBorderRadiusTiny,
         ),
         child: SafeArea(
           top: false,

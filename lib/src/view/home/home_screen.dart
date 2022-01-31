@@ -107,12 +107,17 @@ class _HomeScreenState extends State<HomeScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
+      backgroundColor: kSecondaryColor,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(kSizeMedium),
+          topRight: Radius.circular(kSizeMedium),
+        ),
+      ),
       elevation: 5,
       builder: (_) {
-        return Container(
-          // height: MediaQuery.of(context).size.height / 2,
-          padding: kPaddingAllMedium,
-          color: kSecondaryColor,
+        return Padding(
+          padding: kPaddingAllLarge,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.end,
@@ -121,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
               TextField(
                 controller: _vendorController,
                 maxLines: 1,
-                maxLength: 24,
+                maxLength: 64,
                 decoration: InputDecoration(
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
@@ -143,7 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
               TextField(
                 controller: _emailController,
                 maxLines: 1,
-                maxLength: 24,
+                maxLength: 64,
                 decoration: InputDecoration(
                   counter: const SizedBox(),
                   border: UnderlineInputBorder(
@@ -166,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 controller: _passwordController,
                 obscuringCharacter: '•',
                 maxLines: 1,
-                maxLength: 24,
+                maxLength: 64,
                 showCursor: false,
                 decoration: InputDecoration(
                   counter: const SizedBox(),
@@ -187,33 +192,66 @@ class _HomeScreenState extends State<HomeScreen> {
               kSizeBoxVerticalSmall,
               // TODO: Add a button to save the item
               itemKey == null
-                  ? ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(kBlueColorShade400),
-                      ),
-                      onPressed: () {
-                        _createItem({
-                          'vendor': _vendorController.text,
-                          'email': _emailController.text,
-                          'password': _passwordController.text,
-                        });
+                  ? Column(
+                      children: [
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(kBlueColorShade400),
+                          ),
+                          onPressed: () {
+                            _createItem({
+                              'vendor': _vendorController.text,
+                              'email': _emailController.text,
+                              'password': _passwordController.text,
+                            });
 
-                        _vendorController.text = '';
-                        _emailController.text = '';
-                        _passwordController.text = '';
+                            _vendorController.text = '';
+                            _emailController.text = '';
+                            _passwordController.text = '';
 
-                        Navigator.of(context).pop();
-                      },
-                      child: Container(
-                        width: double.infinity,
-                        height: 60,
-                        child: Center(
-                          child: Text(
-                            'Create'.toUpperCase(),
+                            Navigator.of(context).pop();
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            height: 60,
+                            child: Center(
+                              child: Text(
+                                'Create'.toUpperCase(),
+                              ),
+                            ),
                           ),
                         ),
-                      ),
+                        kSizeBoxVerticalSmall,
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(kSecondaryColor),
+                            side: MaterialStateProperty.all(
+                              BorderSide(
+                                color: kAccentColor,
+                                width: 2,
+                              ),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            height: 60,
+                            child: Center(
+                              child: Text(
+                                'Cancel'.toUpperCase(),
+                                style: kThioAlli.textTheme.button!.copyWith(
+                                  color: kAccentColor,
+                                  fontWeight: kFontWeightSemiBold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     )
                   : Column(
                       children: [
@@ -258,6 +296,37 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           onPressed: () {
+                            _deleteItem(itemKey);
+
+                            Navigator.of(context).pop();
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            height: 60,
+                            child: Center(
+                              child: Text(
+                                'Delete'.toUpperCase(),
+                                style: kThioAlli.textTheme.button!.copyWith(
+                                  color: kErrorColor,
+                                  fontWeight: kFontWeightSemiBold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        kSizeBoxVerticalSmall,
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(kSecondaryColor),
+                            side: MaterialStateProperty.all(
+                              BorderSide(
+                                color: kAccentColor,
+                                width: 2,
+                              ),
+                            ),
+                          ),
+                          onPressed: () {
                             Navigator.of(context).pop();
                           },
                           child: Container(
@@ -267,7 +336,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               child: Text(
                                 'Cancel'.toUpperCase(),
                                 style: kThioAlli.textTheme.button!.copyWith(
-                                  color: kErrorColor,
+                                  color: kAccentColor,
+                                  fontWeight: kFontWeightSemiBold,
                                 ),
                               ),
                             ),

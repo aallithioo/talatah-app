@@ -70,6 +70,147 @@ class _HomeBodyState extends State<HomeBody> {
     );
   }
 
+  // TextFields' controllers
+  final TextEditingController _vendorController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  /*
+    This function will be triggered when the floating button is pressed.
+    It will alse be trigerred when you want to update an item
+  */
+  void _showForm(BuildContext context, int itemKey) async {
+    /*
+      itemKey == null -> create a new item
+      itemKey != null -> update an existing item
+    */
+
+    if (itemKey == null) {
+      final existingItem =
+          _items.firstWhere((element) => element['key'] == itemKey);
+      _vendorController.text = existingItem['vendor'];
+      _emailController.text = existingItem['email'];
+      _passwordController.text = existingItem['password'];
+    }
+
+    showDialog(
+      context: context,
+      builder: (_) {
+        return Center(
+          child: Container(
+            padding: kPaddingSymetricHorizontalSmall,
+            child: Form(
+              child: Column(
+                children: [
+                  kSizeBoxVerticalSmall,
+                  Container(
+                    height: 60,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      borderRadius: kBorderRadiusSmall,
+                    ),
+                    child: TextFormField(
+                      controller: _vendorController,
+                      decoration: InputDecoration(
+                        hintText: 'e.g. Google',
+                        hintStyle: kThioAlli.textTheme.caption!.copyWith(
+                          color: kGreyColorShade500,
+                          fontSize: kSizeSmall / 1.5,
+                          fontWeight: kFontWeightLight,
+                        ),
+                        filled: true,
+                        fillColor: kGreyColorShade50,
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter a vendor';
+                        }
+                        return null;
+                      },
+                    ),
+                  ),
+                  kSizeBoxVerticalSmall,
+                  Container(
+                    height: 60,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      borderRadius: kBorderRadiusSmall,
+                    ),
+                    child: TextFormField(
+                      controller: _emailController,
+                      decoration: InputDecoration(
+                        hintText: 'e.g. johndoe@example.com',
+                        hintStyle: kThioAlli.textTheme.caption!.copyWith(
+                          color: kGreyColorShade500,
+                          fontSize: kSizeSmall / 1.5,
+                          fontWeight: kFontWeightLight,
+                        ),
+                        filled: true,
+                        fillColor: kGreyColorShade50,
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter an email';
+                        }
+                        return null;
+                      },
+                    ),
+                  ),
+                  kSizeBoxVerticalSmall,
+                  Container(
+                    height: 60,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      borderRadius: kBorderRadiusSmall,
+                    ),
+                    child: TextFormField(
+                      controller: _passwordController,
+                      decoration: InputDecoration(
+                        hintStyle: kThioAlli.textTheme.caption!.copyWith(
+                          color: kGreyColorShade500,
+                          fontSize: kSizeSmall / 1.5,
+                          fontWeight: kFontWeightLight,
+                        ),
+                        filled: true,
+                        fillColor: kGreyColorShade50,
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter a password';
+                        }
+                        return null;
+                      },
+                    ),
+                  ),
+                  kSizeBoxVerticalSmall,
+                  Container(
+                    width: MediaQuery.of(context).size.width / 2.5,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: kAccentColor,
+                      borderRadius: kBorderRadiusSmall,
+                    ),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Create'.toUpperCase(),
+                        style: kThioAlli.textTheme.button!.copyWith(
+                          color: kSecondaryColor,
+                          fontWeight: kFontWeightLight,
+                        ),
+                      ),
+                    ),
+                  ),
+                  kSizeBoxVerticalSmall,
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

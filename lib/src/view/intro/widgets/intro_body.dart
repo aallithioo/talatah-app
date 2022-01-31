@@ -89,7 +89,7 @@ class _IntroBodyState extends State<IntroBody> {
                 ),
                 child: TextButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, Routes.home);
+                    Navigator.pushReplacementNamed(context, Routes.info);
                   },
                   child: Text(
                     'Continue'.toUpperCase(),

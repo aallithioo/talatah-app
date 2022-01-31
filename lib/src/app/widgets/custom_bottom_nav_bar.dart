@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:talatah/src/app/themes/size.dart';
+
+import '../themes/size.dart';
 
 import '../widgets/custom_border.dart';
 
 import '../enums.dart';
+
 import '../routes/route.dart';
+
 import '../themes/color.dart';
+
 import 'custom_border.dart';
 import 'custom_padding.dart';
 

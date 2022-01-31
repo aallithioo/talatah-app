@@ -48,7 +48,7 @@ class CustomBottomNavBar extends StatelessWidget {
                       ? kAccentColor
                       : kAccentColor.withOpacity(0.3),
                 ),
-                onPressed: () => Navigator.pushNamed(
+                onPressed: () => Navigator.pushReplacementNamed(
                   context,
                   Routes.home,
                 ),
@@ -60,7 +60,7 @@ class CustomBottomNavBar extends StatelessWidget {
                       ? kAccentColor
                       : kAccentColor.withOpacity(0.3),
                 ),
-                onPressed: () => Navigator.pushNamed(
+                onPressed: () => Navigator.pushReplacementNamed(
                   context,
                   Routes.setting,
                 ),

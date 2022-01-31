@@ -4,6 +4,7 @@ import 'package:hive/hive.dart';
 import 'package:talatah/src/app/enums.dart';
 import 'package:talatah/src/app/widgets/custom_appbar.dart';
 import 'package:talatah/src/app/widgets/custom_bottom_nav_bar.dart';
+import 'package:talatah/src/app/widgets/custom_margin.dart';
 
 import '../../app/themes/color.dart';
 import '../../app/themes/fontweight.dart';
@@ -12,7 +13,6 @@ import '../../app/themes/theme.dart';
 import '../../app/widgets/custom_border.dart';
 import '../../app/widgets/custom_padding.dart';
 import '../../app/widgets/custom_sizebox.dart';
-import '../../app/widgets/custom_snackbar.dart';
 
 // part './widgets/home_body.dart';
 
@@ -61,6 +61,27 @@ class _HomeScreenState extends State<HomeScreen> {
   Future<void> _createItem(Map<String, dynamic> newItem) async {
     await _box.add(newItem);
     _getItems();
+
+    Get.snackbar(
+      "Success",
+      "Item created successfully",
+      icon: Icon(
+        Icons.notifications,
+        size: kSizeMedium,
+        color: kWhiteColorShade900,
+      ),
+      snackPosition: SnackPosition.TOP,
+      borderRadius: 12,
+      margin: kMarginAllMedium,
+      colorText: kWhiteColorShade900,
+      duration: const Duration(seconds: 4),
+      isDismissible: true,
+      dismissDirection: DismissDirection.horizontal,
+      forwardAnimationCurve: Curves.easeOutBack,
+      reverseAnimationCurve: Curves.easeIn,
+      barBlur: kSizeMedium,
+      shouldIconPulse: true,
+    );
   }
 
 // TODO: Read an item
@@ -74,7 +95,26 @@ class _HomeScreenState extends State<HomeScreen> {
     await _box.put(itemKey, item);
     _getItems();
 
-    Get.snackbar('Success!', 'sefeaf');
+    Get.snackbar(
+      "Success",
+      "Data updated successfully",
+      icon: Icon(
+        Icons.notifications,
+        size: kSizeMedium,
+        color: kWhiteColorShade900,
+      ),
+      snackPosition: SnackPosition.TOP,
+      borderRadius: 12,
+      margin: kMarginAllMedium,
+      colorText: kWhiteColorShade900,
+      duration: const Duration(seconds: 4),
+      isDismissible: true,
+      dismissDirection: DismissDirection.horizontal,
+      forwardAnimationCurve: Curves.easeOutBack,
+      reverseAnimationCurve: Curves.easeIn,
+      barBlur: kSizeMedium,
+      shouldIconPulse: true,
+    );
   }
 
 // TODO: Delete an item
@@ -84,22 +124,25 @@ class _HomeScreenState extends State<HomeScreen> {
 
     // TODO: Display a snackbar
     Get.snackbar(
-      "GeeksforGeeks",
-      "Hello everyone",
-      icon: Icon(Icons.person, color: Colors.white),
+      "Success",
+      "Data deleted successfully",
+      icon: Icon(
+        Icons.notifications,
+        size: kSizeMedium,
+        color: kWhiteColorShade900,
+      ),
       snackPosition: SnackPosition.TOP,
-      backgroundColor: Colors.green,
-      borderRadius: 20,
-      margin: EdgeInsets.all(15),
-      colorText: Colors.white,
-      duration: Duration(seconds: 4),
+      borderRadius: 12,
+      margin: kMarginAllMedium,
+      colorText: kWhiteColorShade900,
+      duration: const Duration(seconds: 4),
       isDismissible: true,
       dismissDirection: DismissDirection.horizontal,
       forwardAnimationCurve: Curves.easeOutBack,
+      reverseAnimationCurve: Curves.easeIn,
+      barBlur: kSizeMedium,
+      shouldIconPulse: true,
     );
-    // ScaffoldMessenger.of(context).showSnackBar(
-    //   kSnackBar('Item has removed')!,
-    // );
   }
 
 // TextFields' controllers
@@ -217,17 +260,42 @@ class _HomeScreenState extends State<HomeScreen> {
                                 MaterialStateProperty.all(kBlueColorShade400),
                           ),
                           onPressed: () {
-                            _createItem({
-                              'vendor': _vendorController.text,
-                              'email': _emailController.text,
-                              'password': _passwordController.text,
-                            });
+                            if (_vendorController.text.isEmpty ||
+                                _emailController.text.isEmpty ||
+                                _passwordController.text.isEmpty) {
+                              Get.snackbar(
+                                "Error",
+                                "Please fill all the fields",
+                                icon: Icon(
+                                  Icons.notifications,
+                                  size: kSizeMedium,
+                                  color: kWhiteColorShade900,
+                                ),
+                                snackPosition: SnackPosition.TOP,
+                                borderRadius: 12,
+                                margin: kMarginAllMedium,
+                                colorText: kWhiteColorShade900,
+                                duration: const Duration(seconds: 4),
+                                isDismissible: true,
+                                dismissDirection: DismissDirection.horizontal,
+                                forwardAnimationCurve: Curves.easeOutBack,
+                                reverseAnimationCurve: Curves.easeIn,
+                                barBlur: kSizeMedium,
+                                shouldIconPulse: true,
+                              );
+                            } else {
+                              _createItem({
+                                'vendor': _vendorController.text,
+                                'email': _emailController.text,
+                                'password': _passwordController.text,
+                              });
 
-                            _vendorController.text = '';
-                            _emailController.text = '';
-                            _passwordController.text = '';
+                              _vendorController.text = '';
+                              _emailController.text = '';
+                              _passwordController.text = '';
 
-                            Navigator.of(context).pop();
+                              Navigator.of(context).pop();
+                            }
                           },
                           child: Container(
                             width: double.infinity,
@@ -435,12 +503,19 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                           const SizedBox(height: 2),
                           // TODO: Display password data
-                          Text(
-                            '••••••••••••••••',
-                            style: kThioAlli.textTheme.bodyText2!.copyWith(
-                              color: kAccentColor,
-                              fontWeight: kFontWeightLight,
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                currentItem['password'] != null
+                                    ? '••••••••••••••••'
+                                    : '',
+                                style: kThioAlli.textTheme.bodyText2!.copyWith(
+                                  color: kAccentColor,
+                                  fontWeight: kFontWeightLight,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

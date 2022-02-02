@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:talatah/src/app/routes/route.dart';
 
+import '../../app/routes/route.dart';
 import '../../app/themes/color.dart';
 import '../../app/themes/fontweight.dart';
 import '../../app/themes/size.dart';

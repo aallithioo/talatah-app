@@ -11,19 +11,19 @@ class _IntroBodyState extends State<IntroBody> {
   int currentPage = 0;
   List<Map<String, String>> introData = [
     {
-      'title': 'Welcome to talatah',
-      'description': 'Welcome to the app',
-      'imageURL': 'assets/images/png/dummy.png',
+      'title': 'Secure',
+      'description': 'Data secured by strong encryption',
+      'imageURL': 'assets/images/png/img_intro_0.png',
     },
     {
-      'title': 'Open-Source Program',
-      'description': 'Welcome to the app',
-      'imageURL': 'assets/images/png/dummy.png',
+      'title': 'Private',
+      'description': 'No one know your data even us!',
+      'imageURL': 'assets/images/png/img_intro.png',
     },
     {
-      'title': 'Privacy is our concern',
-      'description': 'Welcome to the app',
-      'imageURL': 'assets/images/png/dummy.png',
+      'title': 'Local',
+      'description': 'All of data stored in local storage',
+      'imageURL': 'assets/images/png/img_intro.png',
     },
   ];
 

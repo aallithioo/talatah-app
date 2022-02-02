@@ -21,7 +21,28 @@ class SettingContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.snackbar(
+                    "Oops",
+                    "Feature still not available yet",
+                    icon: Icon(
+                      Icons.notifications,
+                      size: kSizeMedium,
+                      color: kWhiteColorShade900,
+                    ),
+                    snackPosition: SnackPosition.TOP,
+                    borderRadius: 12,
+                    margin: kMarginAllMedium,
+                    colorText: kWhiteColorShade900,
+                    duration: const Duration(seconds: 4),
+                    isDismissible: true,
+                    dismissDirection: DismissDirection.horizontal,
+                    forwardAnimationCurve: Curves.easeOutBack,
+                    reverseAnimationCurve: Curves.easeIn,
+                    barBlur: kSizeMedium,
+                    shouldIconPulse: true,
+                  );
+                },
                 child: Text(
                   'Theme',
                   style: kThioAlli.textTheme.button!.copyWith(
@@ -32,7 +53,28 @@ class SettingContent extends StatelessWidget {
               ),
               kDivider,
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.snackbar(
+                    "Oops",
+                    "Feature still not available yet",
+                    icon: Icon(
+                      Icons.notifications,
+                      size: kSizeMedium,
+                      color: kWhiteColorShade900,
+                    ),
+                    snackPosition: SnackPosition.TOP,
+                    borderRadius: 12,
+                    margin: kMarginAllMedium,
+                    colorText: kWhiteColorShade900,
+                    duration: const Duration(seconds: 4),
+                    isDismissible: true,
+                    dismissDirection: DismissDirection.horizontal,
+                    forwardAnimationCurve: Curves.easeOutBack,
+                    reverseAnimationCurve: Curves.easeIn,
+                    barBlur: kSizeMedium,
+                    shouldIconPulse: true,
+                  );
+                },
                 child: Text(
                   'Export Data',
                   style: kThioAlli.textTheme.button!.copyWith(
@@ -43,7 +85,28 @@ class SettingContent extends StatelessWidget {
               ),
               kDivider,
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.snackbar(
+                    "Oops",
+                    "Feature still not available yet",
+                    icon: Icon(
+                      Icons.notifications,
+                      size: kSizeMedium,
+                      color: kWhiteColorShade900,
+                    ),
+                    snackPosition: SnackPosition.TOP,
+                    borderRadius: 12,
+                    margin: kMarginAllMedium,
+                    colorText: kWhiteColorShade900,
+                    duration: const Duration(seconds: 4),
+                    isDismissible: true,
+                    dismissDirection: DismissDirection.horizontal,
+                    forwardAnimationCurve: Curves.easeOutBack,
+                    reverseAnimationCurve: Curves.easeIn,
+                    barBlur: kSizeMedium,
+                    shouldIconPulse: true,
+                  );
+                },
                 child: Text(
                   'Release Notes',
                   style: kThioAlli.textTheme.button!.copyWith(
@@ -68,7 +131,28 @@ class SettingContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.snackbar(
+                    "Oops",
+                    "Feature still not available yet",
+                    icon: Icon(
+                      Icons.notifications,
+                      size: kSizeMedium,
+                      color: kWhiteColorShade900,
+                    ),
+                    snackPosition: SnackPosition.TOP,
+                    borderRadius: 12,
+                    margin: kMarginAllMedium,
+                    colorText: kWhiteColorShade900,
+                    duration: const Duration(seconds: 4),
+                    isDismissible: true,
+                    dismissDirection: DismissDirection.horizontal,
+                    forwardAnimationCurve: Curves.easeOutBack,
+                    reverseAnimationCurve: Curves.easeIn,
+                    barBlur: kSizeMedium,
+                    shouldIconPulse: true,
+                  );
+                },
                 child: Text(
                   'Support',
                   style: kThioAlli.textTheme.button!.copyWith(
@@ -79,7 +163,28 @@ class SettingContent extends StatelessWidget {
               ),
               kDivider,
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.snackbar(
+                    "Oops",
+                    "Feature still not available yet",
+                    icon: Icon(
+                      Icons.notifications,
+                      size: kSizeMedium,
+                      color: kWhiteColorShade900,
+                    ),
+                    snackPosition: SnackPosition.TOP,
+                    borderRadius: 12,
+                    margin: kMarginAllMedium,
+                    colorText: kWhiteColorShade900,
+                    duration: const Duration(seconds: 4),
+                    isDismissible: true,
+                    dismissDirection: DismissDirection.horizontal,
+                    forwardAnimationCurve: Curves.easeOutBack,
+                    reverseAnimationCurve: Curves.easeIn,
+                    barBlur: kSizeMedium,
+                    shouldIconPulse: true,
+                  );
+                },
                 child: Text(
                   'Report Bug',
                   style: kThioAlli.textTheme.button!.copyWith(
@@ -90,7 +195,28 @@ class SettingContent extends StatelessWidget {
               ),
               kDivider,
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.snackbar(
+                    "Oops",
+                    "Feature still not available yet",
+                    icon: Icon(
+                      Icons.notifications,
+                      size: kSizeMedium,
+                      color: kWhiteColorShade900,
+                    ),
+                    snackPosition: SnackPosition.TOP,
+                    borderRadius: 12,
+                    margin: kMarginAllMedium,
+                    colorText: kWhiteColorShade900,
+                    duration: const Duration(seconds: 4),
+                    isDismissible: true,
+                    dismissDirection: DismissDirection.horizontal,
+                    forwardAnimationCurve: Curves.easeOutBack,
+                    reverseAnimationCurve: Curves.easeIn,
+                    barBlur: kSizeMedium,
+                    shouldIconPulse: true,
+                  );
+                },
                 child: Text(
                   'Privacy Policy',
                   style: kThioAlli.textTheme.button!.copyWith(

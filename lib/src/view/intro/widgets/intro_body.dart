@@ -23,7 +23,7 @@ class _IntroBodyState extends State<IntroBody> {
     {
       'title': 'Local',
       'description': 'All of data stored in local storage',
-      'imageURL': 'assets/images/png/img_intro_@.png',
+      'imageURL': 'assets/images/png/img_intro_2.png',
     },
   ];
 

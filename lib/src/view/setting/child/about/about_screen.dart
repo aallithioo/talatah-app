@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../../../../app/themes/fontweight.dart';
+import '../../../../app/themes/theme.dart';
 import '../../../../app/themes/color.dart';
+import '../../../../app/widgets/custom_border.dart';
+import '../../../../app/widgets/custom_sizebox.dart';
 import '../../../../app/widgets/custom_padding.dart';
 import '../../../../app/widgets/custom_appbar.dart';
 

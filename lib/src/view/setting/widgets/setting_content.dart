@@ -101,7 +101,9 @@ class SettingContent extends StatelessWidget {
               ),
               kDivider,
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, Routes.about);
+                },
                 child: Text(
                   'About',
                   style: kThioAlli.textTheme.button!.copyWith(

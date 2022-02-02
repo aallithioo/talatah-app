@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:talatah/src/app/themes/theme.dart';
+import 'package:talatah/src/app/widgets/custom_appbar.dart';
+import 'package:talatah/src/app/widgets/custom_border.dart';
+import 'package:talatah/src/app/widgets/custom_divider.dart';
+import 'package:talatah/src/app/widgets/custom_sizebox.dart';
 
 import '../../app/widgets/custom_padding.dart';
 import '../../app/enums.dart';
@@ -15,7 +20,8 @@ class SettingScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kPrimaryColor,
-      body: SettingBody(),
+      appBar: kAppBar('talatah'),
+      body: const SettingBody(),
       bottomNavigationBar:
           const CustomBottomNavBar(selectedMenu: MenuState.setting),
     );

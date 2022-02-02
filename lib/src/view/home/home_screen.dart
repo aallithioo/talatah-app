@@ -538,7 +538,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: kAccentColor.withOpacity(0.6),
                                   fontSize: kSizeTiny,
                                   fontWeight: kFontWeightLight,
-                                  letterSpacing: 2.5,
+                                  letterSpacing: 2,
                                 ),
                               ),
                             ],

@@ -8,9 +8,7 @@ class SettingBody extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: kPaddingSymetricHorizontalLarge,
-        child: Column(
-          children: [],
-        ),
+        child: const SettingContent(),
       ),
     );
   }

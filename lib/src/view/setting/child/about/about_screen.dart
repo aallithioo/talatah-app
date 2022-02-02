@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:talatah/src/app/routes/route.dart';
+import 'package:talatah/src/app/themes/size.dart';
+import 'package:talatah/src/app/themes/textalign.dart';
 
 import '../../../../app/themes/fontweight.dart';
 import '../../../../app/themes/theme.dart';

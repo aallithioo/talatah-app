@@ -18,12 +18,12 @@ class _IntroBodyState extends State<IntroBody> {
     {
       'title': 'Private',
       'description': 'No one know your data even us!',
-      'imageURL': 'assets/images/png/img_intro.png',
+      'imageURL': 'assets/images/png/img_intro_1.png',
     },
     {
       'title': 'Local',
       'description': 'All of data stored in local storage',
-      'imageURL': 'assets/images/png/img_intro.png',
+      'imageURL': 'assets/images/png/img_intro_@.png',
     },
   ];
 

@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:talatah/src/app/themes/size.dart';
+
+import '../themes/size.dart';
 
 import '../widgets/custom_border.dart';
 
 import '../enums.dart';
+
 import '../routes/route.dart';
+
 import '../themes/color.dart';
+
 import 'custom_border.dart';
 import 'custom_padding.dart';
 
@@ -39,12 +43,12 @@ class CustomBottomNavBar extends StatelessWidget {
             children: [
               IconButton(
                 icon: Icon(
-                  Icons.view_in_ar_outlined,
+                  Icons.crop_free,
                   color: MenuState.home == selectedMenu
                       ? kAccentColor
                       : kAccentColor.withOpacity(0.3),
                 ),
-                onPressed: () => Navigator.pushNamed(
+                onPressed: () => Navigator.pushReplacementNamed(
                   context,
                   Routes.home,
                 ),
@@ -56,7 +60,7 @@ class CustomBottomNavBar extends StatelessWidget {
                       ? kAccentColor
                       : kAccentColor.withOpacity(0.3),
                 ),
-                onPressed: () => Navigator.pushNamed(
+                onPressed: () => Navigator.pushReplacementNamed(
                   context,
                   Routes.setting,
                 ),

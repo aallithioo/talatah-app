@@ -61,10 +61,12 @@ class InfoBody extends StatelessWidget {
                         color: kAccentColor,
                         width: 2,
                       ),
-                      borderRadius: kBorderRadiusMedium,
+                      borderRadius: kBorderRadiusTiny,
                     ),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacementNamed(context, Routes.home);
+                      },
                       child: Text(
                         'Continue'.toUpperCase(),
                         style: kThioAlli.textTheme.button!.copyWith(

@@ -25,7 +25,6 @@ class InfoContent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // kSizeBoxVerticalLarge,
-            // TODO: Add version
             Text(
               version!,
               style: kThioAlli.textTheme.headline6!.copyWith(
@@ -35,7 +34,6 @@ class InfoContent extends StatelessWidget {
               textAlign: kTextAlignLeft,
             ),
             // kSizeBoxVerticalTiny,
-            // TODO: Add descriptions
             Text(
               description!,
               style: kThioAlli.textTheme.bodyText2!.copyWith(
@@ -44,7 +42,6 @@ class InfoContent extends StatelessWidget {
               ),
               textAlign: kTextAlignLeft,
             ),
-            // TODO: Add changes
             Text(
               changes!,
               style: kThioAlli.textTheme.bodyText2!.copyWith(

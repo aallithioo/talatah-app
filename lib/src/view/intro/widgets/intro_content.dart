@@ -15,10 +15,8 @@ class IntroContent extends StatelessWidget {
     return Column(
       children: [
         const Spacer(),
-        // TODO: Add images
         Image.asset(imageURL!),
         kSizeBoxVerticalLarge,
-        // TODO: Add title
         Text(
           title!,
           style: kThioAlli.textTheme.headline6!.copyWith(
@@ -28,7 +26,6 @@ class IntroContent extends StatelessWidget {
           textAlign: kTextAlignCenter,
         ),
         kSizeBoxVerticalTiny,
-        // TODO: Add descriptions
         Text(
           description!,
           style: kThioAlli.textTheme.bodyText1!.copyWith(

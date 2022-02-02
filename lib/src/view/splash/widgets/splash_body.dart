@@ -10,8 +10,12 @@ class SplashBody extends StatelessWidget {
         padding: kPaddingSymetricHorizontalLarge,
         child: Center(
           child: Text(
-            'Splash Screen',
-            style: kThioAlli.textTheme.bodyText1,
+            'talatah',
+            style: kThioAlli.textTheme.headline6!.copyWith(
+              color: kWhiteColorShade900,
+              fontSize: kSizeMedium,
+              fontWeight: kFontWeightBold,
+            ),
           ),
         ),
       ),

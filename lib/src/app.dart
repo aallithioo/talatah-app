@@ -6,6 +6,7 @@ import 'app/routes/route.dart';
 import 'view/home/home_screen.dart';
 import 'view/info/info_screen.dart';
 import 'view/intro/intro_screen.dart';
+import 'view/setting/setting_screen.dart';
 import 'view/splash/splash_screen.dart';
 
 class MyApp extends StatelessWidget {
@@ -15,12 +16,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.home,
+      initialRoute: Routes.splash,
       routes: {
         Routes.splash: (_) => const SplashScreen(),
         Routes.intro: (_) => const IntroScreen(),
         Routes.info: (_) => const InfoScreen(),
         Routes.home: (_) => const HomeScreen(),
+        Routes.setting: (_) => const SettingScreen(),
       },
     );
   }

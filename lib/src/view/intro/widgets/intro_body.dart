@@ -11,19 +11,19 @@ class _IntroBodyState extends State<IntroBody> {
   int currentPage = 0;
   List<Map<String, String>> introData = [
     {
-      'title': 'Welcome to talatah',
-      'description': 'Welcome to the app',
-      'imageURL': 'assets/images/png/dummy.png',
+      'title': 'Secure',
+      'description': 'Data secured by strong encryption',
+      'imageURL': 'assets/images/png/img_intro_0.png',
     },
     {
-      'title': 'Open-Source Program',
-      'description': 'Welcome to the app',
-      'imageURL': 'assets/images/png/dummy.png',
+      'title': 'Private',
+      'description': 'No one know your data even us!',
+      'imageURL': 'assets/images/png/img_intro_1.png',
     },
     {
-      'title': 'Privacy is our concern',
-      'description': 'Welcome to the app',
-      'imageURL': 'assets/images/png/dummy.png',
+      'title': 'Local',
+      'description': 'All of data stored in local storage',
+      'imageURL': 'assets/images/png/img_intro_2.png',
     },
   ];
 
@@ -34,7 +34,6 @@ class _IntroBodyState extends State<IntroBody> {
         children: [
           const Spacer(),
           kSizeBoxVerticalMedium,
-          // TODO: App name or logo
           Text(
             'talatah',
             style: kThioAlli.textTheme.headline3!.copyWith(
@@ -43,7 +42,6 @@ class _IntroBodyState extends State<IntroBody> {
             ),
           ),
           kSizeBoxVerticalMedium,
-          // TODO: Main content & change it to a auto slider
           Expanded(
             flex: 4,
             child: PageView.builder(
@@ -58,8 +56,6 @@ class _IntroBodyState extends State<IntroBody> {
               },
             ),
           ),
-
-          // TODO: Add indicator
           Expanded(
             flex: 1,
             child: Row(
@@ -72,8 +68,6 @@ class _IntroBodyState extends State<IntroBody> {
               ],
             ),
           ),
-
-          // TODO: Next button
           Positioned.fill(
             child: Padding(
               padding: EdgeInsets.fromLTRB(
@@ -87,14 +81,16 @@ class _IntroBodyState extends State<IntroBody> {
                 height: 60,
                 decoration: BoxDecoration(
                   color: kTransparentColor,
-                  borderRadius: kBorderRadiusHuge,
+                  borderRadius: kBorderRadiusTiny,
                   border: Border.all(
                     color: kAccentColor,
                     width: 2,
                   ),
                 ),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, Routes.info);
+                  },
                   child: Text(
                     'Continue'.toUpperCase(),
                     style: kThioAlli.textTheme.button!.copyWith(
@@ -111,7 +107,6 @@ class _IntroBodyState extends State<IntroBody> {
     );
   }
 
-  // TODO: Add indicator animation
   AnimatedContainer indicator({int? index}) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),

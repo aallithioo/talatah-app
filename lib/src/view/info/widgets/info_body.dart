@@ -7,19 +7,19 @@ class InfoBody extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Map<String, String>> releaseNotesData = [
       {
-        'version': 'v1.0.2',
-        'description': 'FIX : Overflow error',
-        'changes': '\n- Fixed overflow error',
-      },
-      {
         'version': 'v1.0.1',
-        'description': 'Add new theme feature',
-        'changes': '\n- Available new themes',
+        'description': 'Welcome to talatah',
+        'changes': '\n- Added a new feature\n- Fixed a bug',
       },
       {
         'version': 'v1.0.0',
-        'description': 'First release',
-        'changes': '\n- Hi, There!',
+        'description': 'Welcome to talatah',
+        'changes': '\nHi, There!\n\nThis is the first release of the app.\n'
+            'It is a work in progress.\n'
+            'I hope you enjoy it.\n'
+            'If you have any suggestions, please let me know.\n\n'
+            'Thanks!\n\n'
+            '- THIO ALLI\n',
       },
     ];
     return SafeArea(

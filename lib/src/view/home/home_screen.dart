@@ -532,11 +532,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                currentItem['password'],
+                                '\u25CF\u25CF\u25CF\u25CF\u25CF\u25CF\u25CF\u25CF',
                                 style: kThioAlli.textTheme.bodyText2!.copyWith(
                                   // color: kAccentColor,
                                   color: kAccentColor.withOpacity(0.6),
+                                  fontSize: kSizeTiny,
                                   fontWeight: kFontWeightLight,
+                                  letterSpacing: 2,
                                 ),
                               ),
                             ],

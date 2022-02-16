@@ -33,15 +33,15 @@ class _IntroBodyState extends State<IntroBody> {
       child: Column(
         children: [
           const Spacer(),
-          kSizeBoxVerticalMedium,
+          SetSizeBox.verticalMedium,
           Text(
             'talatah',
             style: kThioAlli.textTheme.headline3!.copyWith(
-              color: kAccentColor,
-              fontWeight: kFontWeightBold,
+              color: SetColor.accent,
+              fontWeight: SetFontWeight.bold,
             ),
           ),
-          kSizeBoxVerticalMedium,
+          SetSizeBox.verticalMedium,
           Expanded(
             flex: 4,
             child: PageView.builder(
@@ -68,22 +68,18 @@ class _IntroBodyState extends State<IntroBody> {
               ],
             ),
           ),
-          Positioned.fill(
+          Padding(
+            padding: SetPadding.onlyBottomMedium,
             child: Padding(
-              padding: EdgeInsets.fromLTRB(
-                kSizeMedium,
-                0,
-                kSizeMedium,
-                kSizeMedium,
-              ),
+              padding: SetPadding.symetricHorizontalMedium,
               child: Container(
                 width: double.infinity,
                 height: 60,
                 decoration: BoxDecoration(
-                  color: kTransparentColor,
-                  borderRadius: kBorderRadiusTiny,
+                  color: SetColor.transparent,
+                  borderRadius: SetBorder.radiusAllTiny,
                   border: Border.all(
-                    color: kAccentColor,
+                    color: SetColor.accent,
                     width: 2,
                   ),
                 ),
@@ -94,9 +90,9 @@ class _IntroBodyState extends State<IntroBody> {
                   child: Text(
                     'Continue'.toUpperCase(),
                     style: kThioAlli.textTheme.button!.copyWith(
-                      color: kAccentColor,
+                      color: SetColor.accent,
                     ),
-                    textAlign: kTextAlignCenter,
+                    textAlign: SetTextAlign.center,
                   ),
                 ),
               ),
@@ -110,12 +106,12 @@ class _IntroBodyState extends State<IntroBody> {
   AnimatedContainer indicator({int? index}) {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
-      margin: EdgeInsets.only(right: kSizeTiny),
-      height: kSizeTiny - 2,
-      width: currentPage == index ? kSizeMedium : kSizeTiny - 2,
+      margin: SetMargin.onlyRightTiny,
+      height: SetSize.tiny - 2,
+      width: currentPage == index ? SetSize.medium - 4 : SetSize.tiny - 2,
       decoration: BoxDecoration(
-        color: currentPage == index ? kAccentColor : kSecondaryColor,
-        borderRadius: kBorderRadiusTiny,
+        color: currentPage == index ? SetColor.accent : SetColor.secondary,
+        borderRadius: SetBorder.radiusAllTiny,
       ),
     );
   }

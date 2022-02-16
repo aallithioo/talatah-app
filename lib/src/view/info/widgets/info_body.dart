@@ -19,59 +19,63 @@ class InfoBody extends StatelessWidget {
             'I hope you enjoy it.\n'
             'If you have any suggestions, please let me know.\n\n'
             'Thanks!\n\n'
-            '- THIO ALLI\n',
+            '- THIO ALLI',
       },
     ];
     return SafeArea(
       child: Padding(
-        padding: kPaddingSymetricHorizontalLarge,
+        padding: SetPadding.symetricHorizontalMedium,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SetSizeBox.verticalMedium,
             Text(
-              'Release Notes',
+              'Release Notes'.toUpperCase(),
               style: kThioAlli.textTheme.headline5!.copyWith(
-                color: kAccentColor,
+                color: SetColor.accent,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            kSizeBoxVerticalSmall,
-            ListView.builder(
-              itemCount: releaseNotesData.length,
-              itemBuilder: (BuildContext context, int index) => InfoContent(
-                version: releaseNotesData[index]['version'],
-                description: releaseNotesData[index]['description'],
-                changes: releaseNotesData[index]['changes'],
+            SetSizeBox.verticalTiny,
+            SingleChildScrollView(
+              scrollDirection: Axis.vertical,
+              child: ListView.builder(
+                itemCount: releaseNotesData.length,
+                itemBuilder: (BuildContext context, int index) => InfoContent(
+                  version: releaseNotesData[index]['version'],
+                  description: releaseNotesData[index]['description'],
+                  changes: releaseNotesData[index]['changes'],
+                ),
+                physics: const ScrollPhysics(),
+                shrinkWrap: true,
               ),
-              physics: const ScrollPhysics(),
-              shrinkWrap: true,
             ),
             const Spacer(),
-            Positioned.fill(
-              bottom: 0,
+            Padding(
+              padding: SetPadding.onlyBottomMedium,
               child: Align(
                 alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: kSizeMedium),
-                  child: Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: kTransparentColor,
-                      border: Border.all(
-                        color: kAccentColor,
-                        width: 2,
-                      ),
-                      borderRadius: kBorderRadiusTiny,
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: SetColor.transparent,
+                    border: Border.all(
+                      color: SetColor.accent,
+                      width: 2,
                     ),
-                    child: TextButton(
-                      onPressed: () {
-                        Navigator.pushReplacementNamed(context, Routes.home);
-                      },
-                      child: Text(
-                        'Continue'.toUpperCase(),
-                        style: kThioAlli.textTheme.button!.copyWith(
-                          color: kAccentColor,
-                        ),
+                    borderRadius: SetBorder.radiusAllTiny,
+                  ),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        Routes.home,
+                      );
+                    },
+                    child: Text(
+                      'Continue'.toUpperCase(),
+                      style: kThioAlli.textTheme.button!.copyWith(
+                        color: SetColor.accent,
                       ),
                     ),
                   ),

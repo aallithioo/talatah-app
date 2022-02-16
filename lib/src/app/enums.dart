@@ -1,1 +1,4 @@
-enum MenuState { home, setting }
+enum MenuState {
+  home,
+  setting,
+}

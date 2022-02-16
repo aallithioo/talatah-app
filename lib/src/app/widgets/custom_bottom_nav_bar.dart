@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../themes/size.dart';
+import 'padding.dart';
 
-import '../widgets/custom_border.dart';
+import 'border.dart';
+
+import '../themes/size.dart';
 
 import '../enums.dart';
 
 import '../routes/route.dart';
 
 import '../themes/color.dart';
-
-import 'custom_border.dart';
-import 'custom_padding.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({
@@ -25,16 +24,16 @@ class CustomBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: kSizeSmall,
-        left: kSizeMedium,
-        right: kSizeMedium,
-        bottom: kSizeMedium,
+        top: SetSize.small,
+        left: SetSize.medium,
+        right: SetSize.medium,
+        bottom: SetSize.medium,
       ),
       child: Container(
-        padding: kPaddingSymetricVerticalSmall / 1.5,
+        padding: SetPadding.symetricVerticalSmall / 1.5,
         decoration: BoxDecoration(
-          color: kSecondaryColor,
-          borderRadius: kBorderRadiusTiny,
+          color: SetColor.secondary,
+          borderRadius: SetBorder.radiusAllTiny,
         ),
         child: SafeArea(
           top: false,
@@ -45,8 +44,8 @@ class CustomBottomNavBar extends StatelessWidget {
                 icon: Icon(
                   Icons.crop_free,
                   color: MenuState.home == selectedMenu
-                      ? kAccentColor
-                      : kAccentColor.withOpacity(0.3),
+                      ? SetColor.accent
+                      : SetColor.accent.withOpacity(0.3),
                 ),
                 onPressed: () => Navigator.pushReplacementNamed(
                   context,
@@ -57,8 +56,8 @@ class CustomBottomNavBar extends StatelessWidget {
                 icon: Icon(
                   Icons.settings_rounded,
                   color: MenuState.setting == selectedMenu
-                      ? kAccentColor
-                      : kAccentColor.withOpacity(0.3),
+                      ? SetColor.accent
+                      : SetColor.accent.withOpacity(0.3),
                 ),
                 onPressed: () => Navigator.pushReplacementNamed(
                   context,

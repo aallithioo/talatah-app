@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:talatah/src/app/themes/font_weight.dart';
 import 'package:talatah/src/app/themes/size.dart';
+import 'package:talatah/src/app/widgets/padding.dart';
 
 import '../../app/routes/route.dart';
-import '../../app/themes/fontweight.dart';
 import '../../app/themes/color.dart';
 import '../../app/themes/theme.dart';
-import '../../app/widgets/custom_padding.dart';
 
 part './widgets/splash_body.dart';
+part './widgets/splash_content.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -27,9 +28,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: kPrimaryColor,
-      body: const SplashBody(),
+    return const Scaffold(
+      body: SplashBody(),
     );
   }
 }

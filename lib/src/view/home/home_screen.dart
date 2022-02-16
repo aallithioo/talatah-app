@@ -228,7 +228,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         borderSide: BorderSide.none,
                         borderRadius: SetBorder.radiusAllTiny / 2,
                       ),
-                      hintText: 'j0hnD0e@123',
+                      hintText: 'e.g. j0hnD0e@123',
                       hintStyle: kThioAlli.textTheme.caption!.copyWith(
                         color: SetColor.grey_400,
                         fontSize: SetFontSize.small / 1.3,

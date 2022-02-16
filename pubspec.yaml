@@ -2,7 +2,7 @@ name: talatah
 description: secure and simple password manager.
 
 publish_to: "none"
-version: 2.0.0+b.1
+version: 1.0.0+b.3
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

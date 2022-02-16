@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:talatah/src/app/themes/letter_spacing.dart';
 
 import '../../app/enums.dart';
 import '../../app/themes/color.dart';
@@ -494,7 +495,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                         color: SetColor.accent.withOpacity(0.6),
                                         fontSize: SetFontSize.tiny,
                                         fontWeight: SetFontWeight.light,
-                                        letterSpacing: 2,
+                                        letterSpacing:
+                                            SetLetterSpacing.positive20 + 2,
                                       ),
                                     ),
                                   ],

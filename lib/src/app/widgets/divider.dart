@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:talatah/src/app/themes/color.dart';
+
+import '../themes/color.dart';
 
 class SetDivider {
   static Divider thin = Divider(

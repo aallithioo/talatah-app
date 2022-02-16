@@ -305,7 +305,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   'Cancel'.toUpperCase(),
                                   style: kThioAlli.textTheme.button!.copyWith(
                                     color: SetColor.accent,
-                                    fontWeight: SetFontWeight.bold,
                                   ),
                                 ),
                               ),
@@ -372,7 +371,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   'Delete'.toUpperCase(),
                                   style: kThioAlli.textTheme.button!.copyWith(
                                     color: SetColor.error,
-                                    fontWeight: SetFontWeight.bold,
                                   ),
                                 ),
                               ),
@@ -405,7 +403,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   'Cancel'.toUpperCase(),
                                   style: kThioAlli.textTheme.button!.copyWith(
                                     color: SetColor.accent,
-                                    fontWeight: SetFontWeight.bold,
                                   ),
                                 ),
                               ),

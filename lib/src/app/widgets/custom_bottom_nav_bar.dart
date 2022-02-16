@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'padding.dart';
-
 import 'border.dart';
-
 import '../themes/size.dart';
-
 import '../enums.dart';
-
 import '../routes/route.dart';
-
 import '../themes/color.dart';
 
 class CustomBottomNavBar extends StatelessWidget {

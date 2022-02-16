@@ -7,6 +7,11 @@ class InfoBody extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Map<String, String>> releaseNotesData = [
       {
+        'version': 'v2.0.0+b.1',
+        'description': 'Rebuild',
+        'changes': '\n- New UI design',
+      },
+      {
         'version': 'v1.0.1',
         'description': 'Welcome to talatah',
         'changes': '\n- Added a new feature\n- Fixed a bug',

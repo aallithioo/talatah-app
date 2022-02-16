@@ -481,7 +481,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     fontWeight: SetFontWeight.light,
                                   ),
                                 ),
-                                const SizedBox(height: 2),
+                                SetSizeBox.verticalTiny,
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,

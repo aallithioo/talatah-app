@@ -7,7 +7,7 @@ class AboutBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: kPaddingSymetricHorizontalLarge,
+        padding: SetPadding.symetricVerticalLarge,
         child: const AboutContent(),
       ),
     );

@@ -9,12 +9,13 @@ class SettingContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        SetSizeBox.verticalMedium,
         Container(
-          padding: kPaddingAllSmall,
+          padding: SetPadding.allSmall,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: kSecondaryColor,
-            borderRadius: kBorderRadiusTiny,
+            color: SetColor.secondary,
+            borderRadius: SetBorder.radiusAllTiny,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -22,95 +23,38 @@ class SettingContent extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  Get.snackbar(
-                    "Oops",
-                    "Feature still not available yet",
-                    icon: Icon(
-                      Icons.notifications,
-                      size: kSizeMedium,
-                      color: kWhiteColorShade900,
-                    ),
-                    snackPosition: SnackPosition.TOP,
-                    borderRadius: 12,
-                    margin: kMarginAllMedium,
-                    colorText: kWhiteColorShade900,
-                    duration: const Duration(seconds: 4),
-                    isDismissible: true,
-                    dismissDirection: DismissDirection.horizontal,
-                    forwardAnimationCurve: Curves.easeOutBack,
-                    reverseAnimationCurve: Curves.easeIn,
-                    barBlur: kSizeMedium,
-                    shouldIconPulse: true,
-                  );
+                  SetSnackbar.error;
                 },
                 child: Text(
                   'Theme',
                   style: kThioAlli.textTheme.button!.copyWith(
-                    color: kAccentColor,
+                    color: SetColor.accent,
                   ),
                   textAlign: TextAlign.left,
                 ),
               ),
-              kDivider,
+              SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  Get.snackbar(
-                    "Oops",
-                    "Feature still not available yet",
-                    icon: Icon(
-                      Icons.notifications,
-                      size: kSizeMedium,
-                      color: kWhiteColorShade900,
-                    ),
-                    snackPosition: SnackPosition.TOP,
-                    borderRadius: 12,
-                    margin: kMarginAllMedium,
-                    colorText: kWhiteColorShade900,
-                    duration: const Duration(seconds: 4),
-                    isDismissible: true,
-                    dismissDirection: DismissDirection.horizontal,
-                    forwardAnimationCurve: Curves.easeOutBack,
-                    reverseAnimationCurve: Curves.easeIn,
-                    barBlur: kSizeMedium,
-                    shouldIconPulse: true,
-                  );
+                  SetSnackbar.error;
                 },
                 child: Text(
                   'Export Data',
                   style: kThioAlli.textTheme.button!.copyWith(
-                    color: kAccentColor,
+                    color: SetColor.accent,
                   ),
                   textAlign: TextAlign.left,
                 ),
               ),
-              kDivider,
+              SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  Get.snackbar(
-                    "Oops",
-                    "Feature still not available yet",
-                    icon: Icon(
-                      Icons.notifications,
-                      size: kSizeMedium,
-                      color: kWhiteColorShade900,
-                    ),
-                    snackPosition: SnackPosition.TOP,
-                    borderRadius: 12,
-                    margin: kMarginAllMedium,
-                    colorText: kWhiteColorShade900,
-                    duration: const Duration(seconds: 4),
-                    isDismissible: true,
-                    dismissDirection: DismissDirection.horizontal,
-                    forwardAnimationCurve: Curves.easeOutBack,
-                    reverseAnimationCurve: Curves.easeIn,
-                    barBlur: kSizeMedium,
-                    shouldIconPulse: true,
-                  );
+                  SetSnackbar.error;
                 },
                 child: Text(
                   'Release Notes',
                   style: kThioAlli.textTheme.button!.copyWith(
-                    color: kAccentColor,
+                    color: SetColor.accent,
                   ),
                   textAlign: TextAlign.left,
                 ),
@@ -118,13 +62,13 @@ class SettingContent extends StatelessWidget {
             ],
           ),
         ),
-        kSizeBoxVerticalMedium,
+        SetSizeBox.verticalMedium,
         Container(
-          padding: kPaddingAllSmall,
+          padding: SetPadding.allSmall,
           width: double.infinity,
           decoration: BoxDecoration(
-            color: kSecondaryColor,
-            borderRadius: kBorderRadiusTiny,
+            color: SetColor.secondary,
+            borderRadius: SetBorder.radiusAllTiny,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -132,100 +76,43 @@ class SettingContent extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  Get.snackbar(
-                    "Oops",
-                    "Feature still not available yet",
-                    icon: Icon(
-                      Icons.notifications,
-                      size: kSizeMedium,
-                      color: kWhiteColorShade900,
-                    ),
-                    snackPosition: SnackPosition.TOP,
-                    borderRadius: 12,
-                    margin: kMarginAllMedium,
-                    colorText: kWhiteColorShade900,
-                    duration: const Duration(seconds: 4),
-                    isDismissible: true,
-                    dismissDirection: DismissDirection.horizontal,
-                    forwardAnimationCurve: Curves.easeOutBack,
-                    reverseAnimationCurve: Curves.easeIn,
-                    barBlur: kSizeMedium,
-                    shouldIconPulse: true,
-                  );
+                  SetSnackbar.error;
                 },
                 child: Text(
                   'Support',
                   style: kThioAlli.textTheme.button!.copyWith(
-                    color: kAccentColor,
+                    color: SetColor.accent,
                   ),
                   textAlign: TextAlign.left,
                 ),
               ),
-              kDivider,
+              SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  Get.snackbar(
-                    "Oops",
-                    "Feature still not available yet",
-                    icon: Icon(
-                      Icons.notifications,
-                      size: kSizeMedium,
-                      color: kWhiteColorShade900,
-                    ),
-                    snackPosition: SnackPosition.TOP,
-                    borderRadius: 12,
-                    margin: kMarginAllMedium,
-                    colorText: kWhiteColorShade900,
-                    duration: const Duration(seconds: 4),
-                    isDismissible: true,
-                    dismissDirection: DismissDirection.horizontal,
-                    forwardAnimationCurve: Curves.easeOutBack,
-                    reverseAnimationCurve: Curves.easeIn,
-                    barBlur: kSizeMedium,
-                    shouldIconPulse: true,
-                  );
+                  SetSnackbar.error;
                 },
                 child: Text(
                   'Report Bug',
                   style: kThioAlli.textTheme.button!.copyWith(
-                    color: kAccentColor,
+                    color: SetColor.accent,
                   ),
                   textAlign: TextAlign.left,
                 ),
               ),
-              kDivider,
+              SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  Get.snackbar(
-                    "Oops",
-                    "Feature still not available yet",
-                    icon: Icon(
-                      Icons.notifications,
-                      size: kSizeMedium,
-                      color: kWhiteColorShade900,
-                    ),
-                    snackPosition: SnackPosition.TOP,
-                    borderRadius: 12,
-                    margin: kMarginAllMedium,
-                    colorText: kWhiteColorShade900,
-                    duration: const Duration(seconds: 4),
-                    isDismissible: true,
-                    dismissDirection: DismissDirection.horizontal,
-                    forwardAnimationCurve: Curves.easeOutBack,
-                    reverseAnimationCurve: Curves.easeIn,
-                    barBlur: kSizeMedium,
-                    shouldIconPulse: true,
-                  );
+                  SetSnackbar.error;
                 },
                 child: Text(
                   'Privacy Policy',
                   style: kThioAlli.textTheme.button!.copyWith(
-                    color: kAccentColor,
+                    color: SetColor.accent,
                   ),
                   textAlign: TextAlign.left,
                 ),
               ),
-              kDivider,
+              SetDivider.thin,
               TextButton(
                 onPressed: () {
                   Navigator.pushReplacementNamed(context, Routes.about);
@@ -233,7 +120,7 @@ class SettingContent extends StatelessWidget {
                 child: Text(
                   'About',
                   style: kThioAlli.textTheme.button!.copyWith(
-                    color: kAccentColor,
+                    color: SetColor.accent,
                   ),
                   textAlign: TextAlign.left,
                 ),

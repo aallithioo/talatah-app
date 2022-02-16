@@ -1,4 +1,15 @@
-import 'package:google_fonts/google_fonts.dart';
+// If using custom fonts
 
-var kPrimaryTypeface = GoogleFonts.poppins();
-var kSecondaryTypeface = GoogleFonts.openSans();
+class SetTypeface {
+  static const primary = 'Gilroy';
+  static const secondary = 'Quicksand';
+}
+
+// If using Google Fonts
+
+// import 'package:google_fonts/google_fonts.dart';
+
+// class SetTypeface {
+//   static final primary = GoogleFonts.poppins();
+//   static final secondary = GoogleFonts.ptSans();
+// }

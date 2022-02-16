@@ -7,16 +7,9 @@ class SplashBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: kPaddingSymetricHorizontalLarge,
-        child: Center(
-          child: Text(
-            'talatah',
-            style: kThioAlli.textTheme.headline6!.copyWith(
-              color: kWhiteColorShade900,
-              fontSize: kSizeMedium,
-              fontWeight: kFontWeightBold,
-            ),
-          ),
+        padding: SetPadding.symetricHorizontalLarge,
+        child: const Center(
+          child: SplashContent(),
         ),
       ),
     );

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'typography.dart';
 import 'themedata.dart';
+import 'typograph.dart';
 
-class Theme {
+class SetTheme {
   // Theme data
-  static ThemeData kThioAlliLightThemeData() => kLightThemeData();
-  static ThemeData kThioAlliDarkThemeData() => kDarkThemeData();
+  static ThemeData setLightTheme() => SetThemeData.lightThemeData();
+  static ThemeData setDarkTheme() => SetThemeData.darkThemeData();
 
   // Text theme
-  static TextTheme kThioAlliLightTextTheme() => kLightText;
-  static TextTheme kThioAlliDarkTextTheme() => kDarkText;
+  static TextTheme setLightTextTheme() => SetTextTheme.lightTextTheme;
+  static TextTheme setDarkTextTheme() => SetTextTheme.darkTextTheme;
 }
 
-final kThioAlli = Theme.kThioAlliLightThemeData();
+final kThioAlli = SetTheme.setDarkTheme();

@@ -1,4 +1,4 @@
-# aallithioo
+# talatah app
 
 A new Flutter project.
 

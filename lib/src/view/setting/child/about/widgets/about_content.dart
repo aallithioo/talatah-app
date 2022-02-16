@@ -29,7 +29,7 @@ class AboutContent extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               ClipRRect(
-                borderRadius: kBorderRadiusMedium,
+                borderRadius: SetBorder.radiusAllMedium,
                 child: Image.asset(
                   aboutData[0]['imageURL'],
                   fit: BoxFit.cover,
@@ -37,59 +37,62 @@ class AboutContent extends StatelessWidget {
                   height: 150,
                 ),
               ),
-              kSizeBoxVerticalSmall,
+              SetSizeBox.verticalSmall,
               Text(
                 aboutData[0]['name'].toUpperCase(),
                 style: kThioAlli.textTheme.headline6!.copyWith(
-                  color: kAccentColor,
-                  fontSize: kSizeMedium,
-                  fontWeight: kFontWeightBold,
+                  color: SetColor.accent,
+                  fontSize: SetSize.medium,
+                  fontWeight: SetFontWeight.bold,
                 ),
               ),
               Text(
                 aboutData[0]['title'].toUpperCase(),
                 style: kThioAlli.textTheme.bodyText1!.copyWith(
-                  color: kAccentColor.withOpacity(0.5),
-                  fontSize: kSizeSmall,
-                  fontWeight: kFontWeightLight,
+                  color: SetColor.accent.withOpacity(0.5),
+                  fontSize: SetSize.medium,
+                  fontWeight: SetFontWeight.light,
                 ),
               ),
-              kSizeBoxVerticalLarge,
+              SetSizeBox.verticalLarge,
               Text(
                 aboutData[0]['description'],
                 style: kThioAlli.textTheme.bodyText1!.copyWith(
-                  color: kAccentColor.withOpacity(0.5),
-                  fontSize: kSizeSmall - 4,
-                  fontWeight: kFontWeightLight,
+                  color: SetColor.accent.withOpacity(0.5),
+                  fontSize: SetSize.medium,
+                  fontWeight: SetFontWeight.light,
                 ),
-                textAlign: kTextAlignCenter,
+                textAlign: SetTextAlign.center,
               ),
             ],
           ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: EdgeInsets.only(bottom: kSizeLarge),
+              padding: SetPadding.onlyBottomLarge,
               child: Container(
                 width: double.infinity,
                 height: 60,
                 decoration: BoxDecoration(
-                  color: kPrimaryColor,
+                  color: SetColor.primary,
                   border: Border.all(
-                    color: kAccentColor,
-                    width: 1,
+                    color: SetColor.accent,
+                    width: SetSize.medium,
                   ),
-                  borderRadius: kBorderRadiusTiny,
+                  borderRadius: SetBorder.radiusAllTiny,
                 ),
                 child: TextButton(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, Routes.setting);
+                    Navigator.pushReplacementNamed(
+                      context,
+                      Routes.setting,
+                    );
                   },
                   child: Text(
                     'Back'.toUpperCase(),
                     style: kThioAlli.textTheme.button!.copyWith(
-                      color: kAccentColor,
-                      fontWeight: kFontWeightLight,
+                      color: SetColor.accent,
+                      fontWeight: SetFontWeight.light,
                     ),
                   ),
                 ),

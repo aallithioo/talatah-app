@@ -1,54 +1,54 @@
 import 'package:flutter/material.dart';
 
+class SetColor {
 //  Base colors
-Color kLightColor = Colors.grey.shade50;
-Color kDarkColor = Colors.grey.shade900;
-Color kSuccessColor = Colors.green.shade300;
-Color kErrorColor = Colors.red.shade300;
-Color kWarningColor = Colors.orange.shade300;
-Color kTransparentColor = Colors.transparent;
+  static Color light = Colors.grey.shade50;
+  static Color dark = Colors.grey.shade900;
+  static Color success = Colors.green.shade300;
+  static Color error = Colors.red.shade300;
+  static Color warning = Colors.orange.shade300;
+  static Color transparent = Colors.transparent;
+  static const Color navy = Color(0xFF050527);
 
 // Main Colors
-Color kPrimaryColor = const Color(0xFF050527);
-Color kSecondaryColor = const Color(0xFF181837);
-Color kTertiaryColor = const Color(0xFF2E2E4E);
-Color kAccentColor = const Color(0xFFC4C4C4);
-
-// Color kPrimaryColor = const Color(0xFF121226);
-// Color kSecondaryColor = const Color(0xFF141431);
+  static const Color primary = Color(0xFF050527);
+  static const Color secondary = Color(0xFF181837);
+  static const Color tertiary = Color(0xFF2E2E4E);
+  static const Color accent = Color(0xFFC4C4C4);
 
 // Blue colors
-Color kBlueColorShade900 = const Color(0xFF03045E);
-Color kBlueColorShade800 = const Color(0xFF023E8A);
-Color kBlueColorShade700 = const Color(0xFF0077B6);
-Color kBlueColorShade600 = const Color(0xFF0096C7);
-Color kBlueColorShade500 = const Color(0xFF00B4D8);
-Color kBlueColorShade400 = const Color(0xFF48CAE4);
-Color kBlueColorShade300 = const Color(0xFF90E0EF);
-Color kBlueColorShade200 = const Color(0xFFADE8F4);
-Color kBlueColorShade100 = const Color(0xFFCAF0F8);
-Color kBlueColorShade50 = const Color(0xFFEAFBFF);
+  static const Color blue_900 = Color(0xFF03045E);
+  static const Color blue_800 = Color(0xFF023E8A);
+  static const Color blue_700 = Color(0xFF0077B6);
+  static const Color blue_600 = Color(0xFF0096C7);
+  static const Color blue_500 = Color(0xFF00B4D8);
+  static const Color blue_400 = Color(0xFF48CAE4);
+  static const Color blue_300 = Color(0xFF90E0EF);
+  static const Color blue_200 = Color(0xFFADE8F4);
+  static const Color blue_100 = Color(0xFFCAF0F8);
+  static const Color blue_50 = Color(0xFFEAFBFF);
 
 // Grey colors
-Color kGreyColorShade900 = Colors.grey.shade900;
-Color kGreyColorShade800 = Colors.grey.shade800;
-Color kGreyColorShade700 = Colors.grey.shade700;
-Color kGreyColorShade600 = Colors.grey.shade600;
-Color kGreyColorShade500 = Colors.grey.shade500;
-Color kGreyColorShade400 = Colors.grey.shade400;
-Color kGreyColorShade300 = Colors.grey.shade300;
-Color kGreyColorShade200 = Colors.grey.shade200;
-Color kGreyColorShade100 = Colors.grey.shade100;
-Color kGreyColorShade50 = Colors.grey.shade50;
+  static Color grey_900 = Colors.grey.shade900;
+  static Color grey_800 = Colors.grey.shade800;
+  static Color grey_700 = Colors.grey.shade700;
+  static Color grey_600 = Colors.grey.shade600;
+  static Color grey_500 = Colors.grey.shade500;
+  static Color grey_400 = Colors.grey.shade400;
+  static Color grey_300 = Colors.grey.shade300;
+  static Color grey_200 = Colors.grey.shade200;
+  static Color grey_100 = Colors.grey.shade100;
+  static Color grey_50 = Colors.grey.shade50;
 
 // White colors
-Color kWhiteColorShade900 = const Color(0xFFFFFFFF);
-Color kWhiteColorShade800 = const Color(0xFFEFEFEF);
-Color kWhiteColorShade700 = const Color(0xFFDFDFDF);
-Color kWhiteColorShade600 = const Color(0xFFCFCFCF);
-Color kWhiteColorShade500 = const Color(0xFFBFBFBF);
-Color kWhiteColorShade400 = const Color(0xFF9F9F9F);
-Color kWhiteColorShade300 = const Color(0xFF8F8F8F);
-Color kWhiteColorShade200 = const Color(0xFF7F7F7F);
-Color kWhiteColorShade100 = const Color(0xFF6F6F6F);
-Color kWhiteColorShade50 = const Color(0xFF4F4F4F);
+  static const Color white_900 = Color(0xFFFFFFFF);
+  static const Color white_800 = Color(0xFFEFEFEF);
+  static const Color white_700 = Color(0xFFDFDFDF);
+  static const Color white_600 = Color(0xFFCFCFCF);
+  static const Color white_500 = Color(0xFFBFBFBF);
+  static const Color white_400 = Color(0xFF9F9F9F);
+  static const Color white_300 = Color(0xFF8F8F8F);
+  static const Color white_200 = Color(0xFF7F7F7F);
+  static const Color white_100 = Color(0xFF6F6F6F);
+  static const Color white_50 = Color(0xFF4F4F4F);
+}

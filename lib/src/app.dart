@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'app/themes/theme.dart';
 import 'app/routes/route.dart';
 
 import 'view/home/home_screen.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: kThioAlli,
       initialRoute: Routes.splash,
       routes: {
         Routes.splash: (_) => const SplashScreen(),

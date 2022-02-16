@@ -16,23 +16,23 @@ class IntroContent extends StatelessWidget {
       children: [
         const Spacer(),
         Image.asset(imageURL!),
-        kSizeBoxVerticalLarge,
+        SetSizeBox.verticalSmall,
         Text(
-          title!,
-          style: kThioAlli.textTheme.headline6!.copyWith(
-            color: kAccentColor,
-            fontWeight: kFontWeightSemiBold,
+          title!.toUpperCase(),
+          style: kThioAlli.textTheme.headline5!.copyWith(
+            color: SetColor.accent,
+            fontWeight: SetFontWeight.bold,
           ),
-          textAlign: kTextAlignCenter,
+          textAlign: SetTextAlign.center,
         ),
-        kSizeBoxVerticalTiny,
+        SetSizeBox.verticalTiny,
         Text(
           description!,
           style: kThioAlli.textTheme.bodyText1!.copyWith(
-            color: kAccentColor.withOpacity(0.5),
-            fontWeight: kFontWeightLight,
+            color: SetColor.accent.withOpacity(0.5),
+            fontWeight: SetFontWeight.light,
           ),
-          textAlign: kTextAlignCenter,
+          textAlign: SetTextAlign.center,
         ),
       ],
     );

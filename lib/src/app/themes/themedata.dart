@@ -1,32 +1,38 @@
 import 'package:flutter/material.dart';
 
 import 'color.dart';
-import 'typography.dart';
+import 'typograph.dart';
 
-ThemeData kDarkThemeData() {
-  return ThemeData(
-    brightness: Brightness.dark,
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
-      foregroundColor: kLightColor,
-      backgroundColor: kBlueColorShade600,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: kBlueColorShade600,
-    ),
-    textTheme: kLightText,
-  );
-}
+class SetThemeData {
+  static ThemeData darkThemeData() {
+    return ThemeData(
+      brightness: Brightness.dark,
+      scaffoldBackgroundColor: SetColor.navy,
+      backgroundColor: SetColor.navy,
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        foregroundColor: SetColor.light,
+        backgroundColor: SetColor.navy,
+      ),
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        selectedItemColor: SetColor.navy,
+      ),
+      textTheme: SetTextTheme.lightTextTheme,
+    );
+  }
 
-ThemeData kLightThemeData() {
-  return ThemeData(
-    brightness: Brightness.light,
-    floatingActionButtonTheme: FloatingActionButtonThemeData(
-      foregroundColor: kDarkColor,
-      backgroundColor: kBlueColorShade600,
-    ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      selectedItemColor: kBlueColorShade600,
-    ),
-    textTheme: kDarkText,
-  );
+  static ThemeData lightThemeData() {
+    return ThemeData(
+      brightness: Brightness.light,
+      scaffoldBackgroundColor: SetColor.light,
+      backgroundColor: SetColor.light,
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        foregroundColor: SetColor.navy,
+        backgroundColor: SetColor.light,
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        selectedItemColor: SetColor.light,
+      ),
+      textTheme: SetTextTheme.darkTextTheme,
+    );
+  }
 }

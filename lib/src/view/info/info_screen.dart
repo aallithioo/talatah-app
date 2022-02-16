@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../app/routes/route.dart';
-import '../../app/themes/size.dart';
 import '../../app/themes/theme.dart';
 import '../../app/themes/color.dart';
 import '../../app/themes/font_weight.dart';

@@ -29,3 +29,42 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/png/
+  fonts:
+    - family: Quicksand
+      fonts:
+      - asset: assets/typeface/quicksand/Quicksand-Bold.ttf
+      - asset: assets/typeface/quicksand/Quicksand-SemiBold.ttf
+      - asset: assets/typeface/quicksand/Quicksand-Medium.ttf
+      - asset: assets/typeface/quicksand/Quicksand-Regular.ttf
+      - asset: assets/typeface/quicksand/Quicksand-Light.ttf
+    - family: Gilroy
+      fonts:
+      - asset: assets/typeface/gilroy/Gilroy-Black.otf
+      - asset: assets/typeface/gilroy/Gilroy-Bold.otf
+      - asset: assets/typeface/gilroy/Gilroy-Extrabold.otf
+      - asset: assets/typeface/gilroy/Gilroy-Heavy.otf
+      - asset: assets/typeface/gilroy/Gilroy-Light.otf
+      - asset: assets/typeface/gilroy/Gilroy-Medium.otf
+      - asset: assets/typeface/gilroy/Gilroy-Regular.otf
+      - asset: assets/typeface/gilroy/Gilroy-Semibold.otf
+      - asset: assets/typeface/gilroy/Gilroy-Thin.otf
+      - asset: assets/typeface/gilroy/Gilroy-RegularItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-ThinItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-SemiboldItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-UltraLightItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-HeavyItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-LightItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-BlackItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-BoldItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-ExtraboldItalic.otf
+        style: italic
+      - asset: assets/typeface/gilroy/Gilroy-MediumItalic.otf
+        style: italic

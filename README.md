@@ -1,6 +1,6 @@
 # talatah app
 
-A new Flutter project.
+Secure and simple password manager.
 
 ## Getting Started
 

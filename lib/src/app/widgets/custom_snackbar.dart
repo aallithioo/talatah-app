@@ -39,7 +39,7 @@ class SetSnackbar {
     shouldIconPulse: true,
   );
   static final created = Get.snackbar(
-    SetSnackbarStatus.error,
+    SetSnackbarStatus.success,
     SetSnackbarMessage.created,
     icon: Icon(
       Icons.notifications,
@@ -59,7 +59,7 @@ class SetSnackbar {
     shouldIconPulse: true,
   );
   static final updated = Get.snackbar(
-    SetSnackbarStatus.error,
+    SetSnackbarStatus.success,
     SetSnackbarMessage.updated,
     icon: Icon(
       Icons.notifications,

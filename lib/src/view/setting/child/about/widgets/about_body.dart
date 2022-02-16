@@ -5,8 +5,8 @@ class AboutBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: const AboutContent(),
+    return const SafeArea(
+      child: AboutContent(),
     );
   }
 }

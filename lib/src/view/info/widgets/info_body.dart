@@ -32,34 +32,47 @@ class InfoBody extends StatelessWidget {
         padding: SetPadding.symetricHorizontalMedium,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SetSizeBox.verticalMedium,
-            Text(
-              'Release Notes'.toUpperCase(),
-              style: kThioAlli.textTheme.headline5!.copyWith(
-                color: SetColor.accent,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SetSizeBox.verticalTiny,
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              child: ListView.builder(
-                itemCount: releaseNotesData.length,
-                itemBuilder: (BuildContext context, int index) => InfoContent(
-                  version: releaseNotesData[index]['version'],
-                  description: releaseNotesData[index]['description'],
-                  changes: releaseNotesData[index]['changes'],
-                ),
-                physics: const ScrollPhysics(),
-                shrinkWrap: true,
-              ),
-            ),
-            const Spacer(),
             Padding(
-              padding: SetPadding.onlyBottomMedium,
-              child: Align(
-                alignment: Alignment.bottomCenter,
+              padding: SetPadding.onlyTopMedium / 1.5,
+              child: Padding(
+                padding: SetPadding.onlyBottomSmall / 1.5,
+                child: Text(
+                  'Release Notes'.toUpperCase(),
+                  style: kThioAlli.textTheme.headline5!.copyWith(
+                    color: SetColor.accent,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.7,
+              child: ListView(
+                children: [
+                  Column(
+                    children: [
+                      ListView.builder(
+                        itemCount: releaseNotesData.length,
+                        itemBuilder: (BuildContext context, int index) =>
+                            InfoContent(
+                          version: releaseNotesData[index]['version'],
+                          description: releaseNotesData[index]['description'],
+                          changes: releaseNotesData[index]['changes'],
+                        ),
+                        physics: const ScrollPhysics(),
+                        shrinkWrap: true,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: SetPadding.onlyTopSmall,
+              child: Padding(
+                padding: SetPadding.onlyBottomMedium,
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(

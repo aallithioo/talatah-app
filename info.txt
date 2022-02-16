@@ -1,0 +1,8 @@
+CREATOR      : THIO ALLI
+
+APP NAME     : talatah
+RELEASE DATE : February 16, 2022
+VERSION      : 1.0.0+b.3
+
+TECHNOlOGIES : - Dart
+               - Flutter

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.aallithioo">
+    package="com.aallithioo.talatah">
    <application
         android:label="Talatah"
         android:icon="@mipmap/ic_launcher">

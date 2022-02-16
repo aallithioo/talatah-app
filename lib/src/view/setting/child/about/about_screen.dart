@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:talatah/src/app/themes/color.dart';
-import 'package:talatah/src/app/themes/font_weight.dart';
-import 'package:talatah/src/app/themes/size.dart';
-import 'package:talatah/src/app/themes/text_align.dart';
-import 'package:talatah/src/app/widgets/border.dart';
-import 'package:talatah/src/app/widgets/padding.dart';
-import 'package:talatah/src/app/widgets/sizebox.dart';
 
 import '../../../../app/routes/route.dart';
-
 import '../../../../app/themes/theme.dart';
+import '../../../../app/themes/color.dart';
+import '../../../../app/themes/font_weight.dart';
+import '../../../../app/themes/size.dart';
+import '../../../../app/themes/text_align.dart';
+import '../../../../app/widgets/border.dart';
+import '../../../../app/widgets/padding.dart';
+import '../../../../app/widgets/sizebox.dart';
 import '../../../../app/widgets/custom_appbar.dart';
 
 part './widgets/about_body.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-import 'package:talatah/src/app/themes/letter_spacing.dart';
 
 import '../../app/enums.dart';
 import '../../app/themes/color.dart';
+import '../../app/themes/letter_spacing.dart';
 import '../../app/themes/theme.dart';
 import '../../app/themes/font_size.dart';
 import '../../app/themes/font_weight.dart';

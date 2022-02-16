@@ -6,10 +6,7 @@ class AboutBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: SetPadding.symetricVerticalLarge,
-        child: const AboutContent(),
-      ),
+      child: const AboutContent(),
     );
   }
 }

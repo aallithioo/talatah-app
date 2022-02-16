@@ -22,83 +22,84 @@ class AboutContent extends StatelessWidget {
     ];
 
     return Center(
-      child: Stack(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              ClipRRect(
-                borderRadius: SetBorder.radiusAllMedium,
-                child: Image.asset(
-                  aboutData[0]['imageURL'],
-                  fit: BoxFit.cover,
-                  width: 150,
-                  height: 150,
-                ),
-              ),
-              SetSizeBox.verticalSmall,
-              Text(
-                aboutData[0]['name'].toUpperCase(),
-                style: kThioAlli.textTheme.headline6!.copyWith(
-                  color: SetColor.accent,
-                  fontSize: SetSize.medium,
-                  fontWeight: SetFontWeight.bold,
-                ),
-              ),
-              Text(
-                aboutData[0]['title'].toUpperCase(),
-                style: kThioAlli.textTheme.bodyText1!.copyWith(
-                  color: SetColor.accent.withOpacity(0.5),
-                  fontSize: SetSize.medium,
-                  fontWeight: SetFontWeight.light,
-                ),
-              ),
-              SetSizeBox.verticalLarge,
-              Text(
-                aboutData[0]['description'],
-                style: kThioAlli.textTheme.bodyText1!.copyWith(
-                  color: SetColor.accent.withOpacity(0.5),
-                  fontSize: SetSize.medium,
-                  fontWeight: SetFontWeight.light,
-                ),
-                textAlign: SetTextAlign.center,
-              ),
-            ],
+          const Spacer(),
+          ClipRRect(
+            borderRadius: SetBorder.radiusAllMedium,
+            child: Image.asset(
+              aboutData[0]['imageURL'],
+              fit: BoxFit.cover,
+              width: 150,
+              height: 150,
+            ),
           ),
+          SetSizeBox.verticalSmall,
+          Text(
+            aboutData[0]['name'].toUpperCase(),
+            style: kThioAlli.textTheme.headline6!.copyWith(
+              color: SetColor.accent,
+              fontWeight: SetFontWeight.bold,
+            ),
+          ),
+          Text(
+            aboutData[0]['title'].toUpperCase(),
+            style: kThioAlli.textTheme.bodyText1!.copyWith(
+              color: SetColor.accent.withOpacity(0.5),
+              fontWeight: SetFontWeight.light,
+            ),
+          ),
+          SetSizeBox.verticalMedium,
+          Padding(
+            padding: SetPadding.symetricHorizontalMedium,
+            child: Text(
+              aboutData[0]['description'],
+              style: kThioAlli.textTheme.bodyText2!.copyWith(
+                color: SetColor.accent.withOpacity(0.5),
+                fontSize: SetFontSize.small / 1.3,
+                fontWeight: SetFontWeight.light,
+              ),
+              textAlign: SetTextAlign.center,
+            ),
+          ),
+          const Spacer(),
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: SetPadding.onlyBottomLarge,
-              child: Container(
-                width: double.infinity,
-                height: 60,
-                decoration: BoxDecoration(
-                  color: SetColor.primary,
-                  border: Border.all(
-                    color: SetColor.accent,
-                    width: SetSize.medium,
-                  ),
-                  borderRadius: SetBorder.radiusAllTiny,
-                ),
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(
-                      context,
-                      Routes.setting,
-                    );
-                  },
-                  child: Text(
-                    'Back'.toUpperCase(),
-                    style: kThioAlli.textTheme.button!.copyWith(
+              padding: SetPadding.symetricHorizontalMedium,
+              child: Padding(
+                padding: SetPadding.onlyBottomMedium,
+                child: Container(
+                  width: double.infinity,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    color: SetColor.primary,
+                    border: Border.all(
                       color: SetColor.accent,
-                      fontWeight: SetFontWeight.light,
+                    ),
+                    borderRadius: SetBorder.radiusAllTiny,
+                  ),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(
+                        context,
+                        Routes.setting,
+                      );
+                    },
+                    child: Text(
+                      'Back'.toUpperCase(),
+                      style: kThioAlli.textTheme.button!.copyWith(
+                        color: SetColor.accent,
+                        fontWeight: SetFontWeight.light,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:talatah/src/app/themes/font_size.dart';
 
+import '../../../../app/themes/font_size.dart';
 import '../../../../app/routes/route.dart';
 import '../../../../app/themes/theme.dart';
 import '../../../../app/themes/color.dart';

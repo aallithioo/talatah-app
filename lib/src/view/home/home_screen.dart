@@ -171,7 +171,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                SetSizeBox.verticalSmall,
+                SetSizeBox.verticalTiny,
                 Container(
                   height: 60,
                   width: double.infinity,
@@ -205,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
-                SetSizeBox.verticalSmall,
+                SetSizeBox.verticalTiny,
                 Container(
                   height: 60,
                   width: double.infinity,

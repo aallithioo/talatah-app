@@ -1,7 +1,7 @@
-part of '../about_screen.dart';
+part of '../privacy_policy_screen.dart';
 
-class AboutContent extends StatelessWidget {
-  const AboutContent({Key? key}) : super(key: key);
+class PrivacyPolicyContent extends StatelessWidget {
+  const PrivacyPolicyContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

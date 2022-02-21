@@ -1,14 +1,14 @@
-part of '../about_screen.dart';
+part of '../donators_screen.dart';
 
-class AboutBody extends StatelessWidget {
-  const AboutBody({Key? key}) : super(key: key);
+class DonatorsBody extends StatelessWidget {
+  const DonatorsBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
         padding: SetPadding.symetricHorizontalMedium,
-        child: const AboutContent(),
+        child: const DonatorsContent(),
       ),
     );
   }

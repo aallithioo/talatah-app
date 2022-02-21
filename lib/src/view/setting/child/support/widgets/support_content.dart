@@ -1,7 +1,7 @@
-part of '../about_screen.dart';
+part of '../support_screen.dart';
 
-class AboutContent extends StatelessWidget {
-  const AboutContent({Key? key}) : super(key: key);
+class SupportContent extends StatelessWidget {
+  const SupportContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

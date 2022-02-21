@@ -1,14 +1,14 @@
-part of '../about_screen.dart';
+part of '../theme_screen.dart';
 
-class AboutBody extends StatelessWidget {
-  const AboutBody({Key? key}) : super(key: key);
+class ThemeBody extends StatelessWidget {
+  const ThemeBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
         padding: SetPadding.symetricHorizontalMedium,
-        child: const AboutContent(),
+        child: const ThemeContent(),
       ),
     );
   }

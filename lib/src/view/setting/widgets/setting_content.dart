@@ -1,7 +1,10 @@
 part of '../setting_screen.dart';
 
 class SettingContent extends StatelessWidget {
-  const SettingContent({Key? key}) : super(key: key);
+  const SettingContent({Key? key})
+      : super(
+          key: key,
+        );
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +26,10 @@ class SettingContent extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  SetSnackbar.error;
+                  Navigator.pushNamed(
+                    context,
+                    Routes.theme,
+                  );
                 },
                 child: Text(
                   'Theme',
@@ -36,10 +42,13 @@ class SettingContent extends StatelessWidget {
               SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  SetSnackbar.error;
+                  Navigator.pushNamed(
+                    context,
+                    Routes.hallOfFame,
+                  );
                 },
                 child: Text(
-                  'Export Data',
+                  'Hall of Fame',
                   style: kThioAlli.textTheme.button!.copyWith(
                     color: SetColor.accent,
                   ),
@@ -49,7 +58,10 @@ class SettingContent extends StatelessWidget {
               SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  SetSnackbar.error;
+                  Navigator.pushNamed(
+                    context,
+                    Routes.releaseNotes,
+                  );
                 },
                 child: Text(
                   'Release Notes',
@@ -76,7 +88,10 @@ class SettingContent extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  SetSnackbar.error;
+                  Navigator.pushNamed(
+                    context,
+                    Routes.support,
+                  );
                 },
                 child: Text(
                   'Support',
@@ -89,7 +104,10 @@ class SettingContent extends StatelessWidget {
               SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  SetSnackbar.error;
+                  Navigator.pushNamed(
+                    context,
+                    Routes.reportBug,
+                  );
                 },
                 child: Text(
                   'Report Bug',
@@ -102,7 +120,26 @@ class SettingContent extends StatelessWidget {
               SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  SetSnackbar.error;
+                  Navigator.pushNamed(
+                    context,
+                    Routes.termsOfService,
+                  );
+                },
+                child: Text(
+                  'Terms',
+                  style: kThioAlli.textTheme.button!.copyWith(
+                    color: SetColor.accent,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+              ),
+              SetDivider.thin,
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    Routes.privacyPolicy,
+                  );
                 },
                 child: Text(
                   'Privacy Policy',
@@ -115,7 +152,10 @@ class SettingContent extends StatelessWidget {
               SetDivider.thin,
               TextButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, Routes.about);
+                  Navigator.pushNamed(
+                    context,
+                    Routes.about,
+                  );
                 },
                 child: Text(
                   'About',

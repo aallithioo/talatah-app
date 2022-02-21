@@ -1,7 +1,7 @@
-part of '../about_screen.dart';
+part of '../release_notes_screen.dart';
 
-class AboutContent extends StatelessWidget {
-  const AboutContent({Key? key}) : super(key: key);
+class ReleaseNotesContent extends StatelessWidget {
+  const ReleaseNotesContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

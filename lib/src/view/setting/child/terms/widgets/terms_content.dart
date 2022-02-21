@@ -1,7 +1,7 @@
-part of '../about_screen.dart';
+part of '../terms_screen.dart';
 
-class AboutContent extends StatelessWidget {
-  const AboutContent({Key? key}) : super(key: key);
+class TermsContent extends StatelessWidget {
+  const TermsContent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

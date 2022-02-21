@@ -1,37 +1,20 @@
 class Routes {
-  // Splash Screen
-  static const splash = '/';
+  // splash screen
+  static const String splash = '/';
+  static const String home = '/app/home';
 
-  // Intro Screen
-  static const intro = '/app';
+  // intro screen
+  static const String intro = '/app';
+  static const String info = '/app/info';
 
-  // Intro Screen
-  static const info = '/app/info';
-
-  // Home Screen
-  static const home = '/app/home';
-
-  // Setting Screen
-  static const setting = '/app/setting';
-
-  // Release Notes Screen
-  static const releaseNotes = '/app/setting/release-notes';
-
-  // About Screen
-  static const about = '/app/setting/about';
-
-  // Support Screen
-  static const support = '/app/setting/support';
-
-  // Terms Screen
-  static const terms = '/app/setting/terms';
-
-  // Privacy Screen
-  static const privacy = '/app/setting/privacy';
-
-  // Report Bug Screen
-  static const reportBug = '/app/setting/report-bug';
-
-  // Theme Screen
-  static const theme = '/app/setting/theme';
+  // settings screen
+  static const String setting = '/app/setting';
+  static const String theme = '/app/setting/theme';
+  static const String about = '/app/setting/about';
+  static const String hallOfFame = '/app/setting/hallOfFame';
+  static const String releaseNotes = '/app/setting/releaseNotes';
+  static const String support = '/app/setting/support';
+  static const String reportBug = '/app/setting/support/reportBug';
+  static const String privacyPolicy = '/app/setting/support/privacyPolicy';
+  static const String termsOfService = '/app/setting/support/termsOfService';
 }
